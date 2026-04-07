@@ -63,7 +63,7 @@ main{
 /* IMAGEN VERTICAL UNIFORME */
 .card img{
   width:100%;
-  height:450px;       /* formato vertical clásico */
+  height:450px;
   object-fit:cover;
   object-position:top;
 }
@@ -85,7 +85,6 @@ main{
   letter-spacing:1px;
 }
 
-/* VIEW EPISODES */
 .card .view-episodes{
   margin-top:10px;
   font-weight:bold;
@@ -93,7 +92,6 @@ main{
   color:#ffd700;
 }
 
-/* BOTONES SUBS */
 .buttons {
   margin-top: 12px;
   display: flex;
@@ -119,15 +117,15 @@ main{
 }
 
 /* BORDES BRILLANTES SEGÚN CATEGORÍA */
-.border-tentacles { box-shadow:0 0 25px #00ff66; }  /* verde */
-.border-monster   { box-shadow:0 0 25px #0080ff; }  /* azul */
-.border-futanari  { box-shadow:0 0 25px #ffd500; }  /* amarillo */
-.border-romantico { box-shadow:0 0 25px #ff4dc4; }  /* rosa */
-.border-hardcore  { box-shadow:0 0 25px #ff0000; }  /* rojo */
-.border-comedia   { box-shadow:0 0 25px #ffffff; }  /* blanco */
-.border-machine   { box-shadow:0 0 25px #a200ff; }  /* violeta */
-.border-ecchi     { box-shadow:0 0 25px #888888; }  /* gris */
-.border-extras    { box-shadow:0 0 25px #8b4513; }  /* marrón */
+.border-tentacles { box-shadow:0 0 25px #00ff66; }
+.border-monster   { box-shadow:0 0 25px #0080ff; }
+.border-futanari  { box-shadow:0 0 25px #ffd500; }
+.border-romantico { box-shadow:0 0 25px #ff4dc4; }
+.border-hardcore  { box-shadow:0 0 25px #ff0000; }
+.border-comedia   { box-shadow:0 0 25px #ffffff; }
+.border-machine   { box-shadow:0 0 25px #a200ff; }
+.border-ecchi     { box-shadow:0 0 25px #888888; }
+.border-extras    { box-shadow:0 0 25px #8b4513; }
 
 /* FOOTER */
 footer{
@@ -147,5 +145,5 @@ footer{
 .counter{
   margin-top:15px;
   font-weight:bold;
-  color:#000; /* NEGRO OPACO */
+  color:#000;
 }
