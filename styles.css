@@ -84,11 +84,16 @@ main{
   letter-spacing:1px;
 }
 
-/* BORDES BRILLANTES POR TEMÁTICA */
-.border-tentacles{ box-shadow:0 0 25px #7b00ff; }
-.border-monster{ box-shadow:0 0 25px #ff0055; }
-.border-machine{ box-shadow:0 0 25px #00ffd0; }
-.border-3d{ box-shadow:0 0 25px #ffd000; }
+/* ===== BORDES BRILLANTES SEGÚN TU TABLA ===== */
+.border-tentacles { box-shadow:0 0 25px #00ff66; }  /* verde */
+.border-monster   { box-shadow:0 0 25px #0080ff; }  /* azul */
+.border-futanari  { box-shadow:0 0 25px #ffd500; }  /* amarillo */
+.border-romantico { box-shadow:0 0 25px #ff4dc4; }  /* rosa */
+.border-hardcore  { box-shadow:0 0 25px #ff0000; }  /* rojo */
+.border-comedia   { box-shadow:0 0 25px #ffffff; }  /* blanco */
+.border-machine   { box-shadow:0 0 25px #a200ff; }  /* violeta */
+.border-ecchi     { box-shadow:0 0 25px #888888; }  /* gris */
+.border-extras    { box-shadow:0 0 25px #8b4513; }  /* marrón */
 
 /* FOOTER */
 footer{
@@ -108,5 +113,5 @@ footer{
 .counter{
   margin-top:15px;
   font-weight:bold;
-  color:#000;          /* NEGRO OPACO */
+  color:#000; /* NEGRO OPACO */
 }
