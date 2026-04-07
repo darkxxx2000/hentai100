@@ -17,12 +17,15 @@ function renderPosts(list){
       <div class="card-content">
         <h2>${post.title}</h2>
         <div class="subtitle">${post.tags.join(' • ')}</div>
+        <div class="view-episodes">${post.subtitle}</div>
+        <div class="buttons">
+          <a href="${post.links.english}" class="btn red" target="_blank">Sub ENGLISH</a>
+          <a href="${post.links.spanish}" class="btn blue" target="_blank">Sub ESPAÑOL</a>
+        </div>
       </div>
     `;
 
-    // CLICK EN IMAGEN -> DETALLE PANTALLA COMPLETA
     card.querySelector('img').addEventListener('click', ()=> showOvaDetail(post));
-
     container.appendChild(card);
   });
 }
@@ -30,11 +33,12 @@ function renderPosts(list){
 /* FUNCION MOSTRAR DETALLE */
 function showOvaDetail(post){
   document.getElementById('postsContainer').style.display = 'none';
-  
   const detailSection = document.getElementById('ovaDetail');
+
+  document.getElementById('detailTitle').innerText = post.title;
   document.getElementById('detailMainImage').src = post.image;
 
-  // thumbnails
+  // MINIATURAS
   const thumbs = document.getElementById('detailThumbnails');
   thumbs.innerHTML = '';
   if(post.thumbnails){
@@ -48,6 +52,7 @@ function showOvaDetail(post){
 
   document.getElementById('detailDescription').innerText = post.description || "No description available.";
 
+  // BOTONES
   document.getElementById('detailButtons').innerHTML = `
     <a href="${post.links.english}" class="btn red" target="_blank">Sub ENGLISH</a>
     <a href="${post.links.spanish}" class="btn blue" target="_blank">Sub ESPAÑOL</a>
@@ -56,18 +61,14 @@ function showOvaDetail(post){
   detailSection.style.display = 'block';
 }
 
-/* CERRAR DETALLE */
-document.getElementById('closeDetail').addEventListener('click', ()=>{
+/* VOLVER AL INICIO */
+function goHome(){
   document.getElementById('ovaDetail').style.display = 'none';
   document.getElementById('postsContainer').style.display = 'grid';
-});
-
-/* LOGO -> HOME */
-function goHome(){
-  document.getElementById('ovaDetail').style.display='none';
-  document.getElementById('postsContainer').style.display = 'grid';
-  window.scrollTo({top:0, behavior:'smooth'});
 }
+
+/* CERRAR DETALLE */
+document.getElementById('closeDetail').addEventListener('click', goHome);
 
 /* FILTRO POR BOTONES */
 function filterTag(tag){
