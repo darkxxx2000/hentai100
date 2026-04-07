@@ -13,10 +13,7 @@
 <body>
 
 <header>
-  <div class="header-top">
-    <div id="logo" onclick="goHome()" style="cursor:pointer; font-family:'Orbitron'; font-size:24px;">OVA Directory</div>
-    <div class="counter">Visitors: <span id="visitCount">0</span></div>
-  </div>
+  <h1>OVA Directory</h1>
 
   <input type="text" id="searchInput" placeholder="Search by title, genre, tags...">
 
@@ -39,13 +36,18 @@
 
 <!-- DETALLE PANTALLA COMPLETA -->
 <section id="ovaDetail">
-  <button id="closeDetail">X Close</button>
-  <div class="detail-top">
+  <div class="detail-header">
+    <div id="logo" onclick="goHome()" style="cursor:pointer; font-family:'Orbitron'; font-size:24px;">OVA Directory</div>
+    <button id="closeDetail">X Close</button>
+  </div>
+
+  <div class="detail-body">
     <div class="main-image">
       <img id="detailMainImage" src="" alt="">
     </div>
     <div class="thumbs-container" id="detailThumbnails"></div>
   </div>
+
   <div id="detailDescription"></div>
   <h3 style="text-align:center;">VIEW EPISODES</h3>
   <div id="detailButtons"></div>
@@ -59,9 +61,21 @@
     <a href="#">Usage</a>
     <a href="#">Contact</a>
   </div>
+  <div class="counter">
+    Visitors: <span id="visitCount">0</span>
+  </div>
 </footer>
 
 <script src="data.js"></script>
 <script src="script.js"></script>
+
+<!-- ===== POPADS ZONE ===== -->
+<script type="text/javascript">
+  var _pop = _pop || [];
+  _pop.push(['siteId', 'PON_AQUI_TU_SITE_ID']);
+</script>
+<script src="https://c1.popads.net/pop.js"></script>
+<!-- ===================== -->
+
 </body>
 </html>
