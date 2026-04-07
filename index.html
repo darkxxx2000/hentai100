@@ -32,7 +32,7 @@
 <!-- GRID PRINCIPAL -->
 <main id="postsContainer"></main>
 
-<!-- DETALLE A PANTALLA COMPLETA -->
+<!-- DETALLE A PANTALLA COMPLETA (INTEGRADO Y RENOVADO) -->
 <section id="ovaDetail">
   <div class="detail-header">
     <div id="logo" onclick="goHome()" style="cursor:pointer; font-family:'Orbitron'; font-size:28px;">OVA Directory</div>
@@ -44,26 +44,37 @@
   <hr class="detail-line">
 
   <div class="detail-body">
-    <!-- IMAGEN PRINCIPAL -->
+    <!-- IMAGEN PRINCIPAL (PORTADA) -->
     <div class="main-image">
-      <img id="detailMainImage" src="" alt="">
+      <img id="detailMainImage" src="ruta/portada.jpg" alt="">
     </div>
 
-    <!-- MINIATURAS A LA DERECHA -->
-    <div class="thumbs-container" id="detailThumbnails"></div>
+    <!-- GALERÍA DE MINIATURAS -->
+    <div class="thumbs-container" id="detailThumbnails">
+      <img src="ruta/img1.jpg" alt="">
+      <img src="ruta/img2.jpg" alt="">
+      <img src="ruta/img3.jpg" alt="">
+      <img src="ruta/img4.jpg" alt="">
+      <!-- Más imágenes -->
+    </div>
   </div>
 
   <!-- DESCRIPCIÓN -->
-  <div id="detailDescription"></div>
+  <div id="detailDescription">
+    Aquí va la descripción de la OVA, con suficiente espacio debajo de la galería.
+  </div>
 
   <!-- VIEW EPISODES -->
-  <h3 style="text-align:center; margin-top:20px;">VIEW EPISODES</h3>
+  <h3 class="view-episodes">VIEW EPISODES</h3>
 
-  <!-- BOTONES -->
-  <div id="detailButtons"></div>
+  <!-- BOTONES CENTRADOS -->
+  <div id="detailButtons">
+    <button class="sub-en">Sub ENGLISH</button>
+    <button class="sub-es">Sub ESPAÑOL</button>
+  </div>
 
-  <!-- FRANJA VACÍA -->
-  <div style="height:60px;"></div>
+  <!-- FRANJA VACÍA AL FINAL -->
+  <div class="bottom-space"></div>
 </section>
 
 <footer>
