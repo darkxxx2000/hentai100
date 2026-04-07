@@ -84,7 +84,7 @@ main{
   letter-spacing:1px;
 }
 
-/* ===== BORDES BRILLANTES SEGÚN TU TABLA ===== */
+/* BORDES BRILLANTES SEGÚN CATEGORÍA */
 .border-tentacles { box-shadow:0 0 25px #00ff66; }  /* verde */
 .border-monster   { box-shadow:0 0 25px #0080ff; }  /* azul */
 .border-futanari  { box-shadow:0 0 25px #ffd500; }  /* amarillo */
