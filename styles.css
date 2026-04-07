@@ -1,80 +1,23 @@
-#ovaDetail {
-  display:none;
-  position: fixed;
-  top:0;
-  left:0;
-  width:100%;
-  height:100%;
-  background:#1a1a2e;
-  color:white;
-  overflow-y:auto;
-  z-index:1000;
-  padding:40px;
-}
-
-#closeDetail {
-  position:absolute;
-  top:20px;
-  right:20px;
-  background:#ff0000;
-  color:white;
-  border:none;
-  padding:10px 15px;
-  cursor:pointer;
-  border-radius:5px;
-}
-
-/* DETALLE TOP: IMAGEN PRINCIPAL Y MINIATURAS */
-.detail-top {
-  display:flex;
-  gap:20px;
-  flex-wrap:wrap;
-  justify-content:center;
-  margin-bottom:20px;
-}
-
-.main-image img {
-  width:400px;
-  border-radius:10px;
-}
-
-.thumbs-container {
-  display:flex;
-  flex-direction:column;
-  gap:10px;
-}
-
-.thumbs-container img {
-  width:80px;
-  cursor:pointer;
-  border-radius:5px;
-  transition:0.2s;
-}
-
-.thumbs-container img:hover {
-  transform: scale(1.1);
-}
-
-/* DESCRIPCIÓN */
-#detailDescription {
-  margin:20px auto;
-  max-width:800px;
-  text-align:center;
-  font-size:16px;
-}
-
-/* BOTONES EN DETALLE */
-#detailButtons {
-  margin-top:20px;
-  text-align:center;
-}
-.btn {
-  padding:12px 25px;
-  margin:10px;
-  border-radius:5px;
-  font-weight:bold;
-  color:white;
-  text-decoration:none;
-}
-.red { background:#ff0000; }
-.blue { background:#007bff; }
+const posts = [
+  {
+    title: "Taimanin Asagi (2007)",
+    tags:["tentacles","ecchi"],
+    color:"tentacles",
+    image:"https://static.wikia.nocookie.net/taimanin/images/f/f3/Tadvdcover.jpg",
+    description:"Taimanin Asagi es un OVA con contenido ecchi y tentacles...",
+    thumbnails:[
+      "https://static.wikia.nocookie.net/taimanin/images/1.jpg",
+      "https://static.wikia.nocookie.net/taimanin/images/2.jpg"
+    ],
+    links:{ english:"https://watchhentai.net/series/taimanin-asagi-id-01/", spanish:"https://hentaijk.com/taimanin-asagi/" }
+  },
+  {
+    title: "OVA 2",
+    tags:["monster","hardcore"],
+    color:"monster",
+    image:"https://via.placeholder.com/400x300?text=OVA+2",
+    description:"OVA 2 es un OVA de monster y hardcore...",
+    thumbnails:["https://via.placeholder.com/100x80?text=2a","https://via.placeholder.com/100x80?text=2b"],
+    links:{ english:"https://example.com/ova2-en", spanish:"https://example.com/ova2-es" }
+  }
+];
