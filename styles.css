@@ -37,7 +37,7 @@ h1{
   cursor:pointer;
 }
 
-/* GRID: SIEMPRE 2 POR FILA */
+/* GRID */
 main{
   display:grid;
   grid-template-columns:repeat(2, 1fr);
@@ -45,7 +45,7 @@ main{
   padding:40px 60px;
 }
 
-/* TARJETA VERTICAL BRILLANTE */
+/* TARJETAS */
 .card{
   background:#111827;
   border-radius:14px;
@@ -60,7 +60,6 @@ main{
   transform:translateY(-6px);
 }
 
-/* IMAGEN VERTICAL UNIFORME */
 .card img{
   width:100%;
   height:450px;
@@ -68,7 +67,6 @@ main{
   object-position:top;
 }
 
-/* CONTENIDO */
 .card-content{
   padding:18px;
 }
@@ -85,38 +83,7 @@ main{
   letter-spacing:1px;
 }
 
-.card .view-episodes{
-  margin-top:10px;
-  font-weight:bold;
-  font-size:14px;
-  color:#ffd700;
-}
-
-.buttons {
-  margin-top: 12px;
-  display: flex;
-  gap: 10px;
-}
-
-.btn {
-  padding: 8px 14px;
-  border-radius: 6px;
-  text-decoration: none;
-  color: white;
-  font-weight: bold;
-  font-size: 14px;
-  transition: 0.2s;
-}
-
-.btn.red { background: #ff0000; }
-.btn.blue { background: #0066ff; }
-
-.btn:hover {
-  opacity: 0.8;
-  transform: scale(1.05);
-}
-
-/* BORDES BRILLANTES SEGÚN CATEGORÍA */
+/* BORDES BRILLANTES */
 .border-tentacles { box-shadow:0 0 25px #00ff66; }
 .border-monster   { box-shadow:0 0 25px #0080ff; }
 .border-futanari  { box-shadow:0 0 25px #ffd500; }
@@ -147,3 +114,43 @@ footer{
   font-weight:bold;
   color:#000;
 }
+
+/* DETALLE A PANTALLA COMPLETA */
+#ovaDetail{
+  display:none;
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background:#1a1a2e;
+  color:white;
+  overflow-y:auto;
+  z-index:1000;
+  padding:40px;
+}
+
+#closeDetail{
+  position:absolute;
+  top:20px;
+  right:20px;
+  background:#ff0000;
+  color:white;
+  border:none;
+  padding:10px 15px;
+  cursor:pointer;
+  border-radius:5px;
+}
+
+/* BOTONES */
+.btn{
+  padding:10px 20px;
+  margin-right:10px;
+  border-radius:5px;
+  text-decoration:none;
+  font-weight:bold;
+  color:white;
+}
+
+.red{background:#ff0000;}
+.blue{background:#007bff;}
