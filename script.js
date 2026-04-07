@@ -1,10 +1,9 @@
 const container = document.getElementById('postsContainer');
 const input = document.getElementById('searchInput');
 
-/* RENDER TARJETAS - Grid inicial sin tocar nada */
+/* RENDER DE TARJETAS (grid principal) */
 function renderPosts(list) {
   container.innerHTML = '';
-
   list.forEach(post => {
     const tagClass = 'border-' + post.color;
 
@@ -17,10 +16,15 @@ function renderPosts(list) {
       <div class="card-content">
         <h2>${post.title}</h2>
         <div class="subtitle">${post.tags.join(' • ')}</div>
+        <!-- BOTONES INICIALES -->
+        <div class="buttons">
+          <a href="${post.links.english}" class="btn red" target="_blank">Sub ENGLISH</a>
+          <a href="${post.links.spanish}" class="btn blue" target="_blank">Sub ESPAÑOL</a>
+        </div>
       </div>
     `;
 
-    // CLICK EN IMAGEN -> MUESTRA DETALLE
+    // CLICK EN IMAGEN -> SECCIÓN DE DETALLE
     card.querySelector('img').addEventListener('click', () => {
       showOvaDetail(post);
     });
@@ -29,29 +33,28 @@ function renderPosts(list) {
   });
 }
 
-/* MOSTRAR DETALLE PANTALLA COMPLETA */
+/* MOSTRAR DETALLE EN PANTALLA COMPLETA */
 function showOvaDetail(post) {
   const detailSection = document.getElementById('ovaDetail');
   const detailTitle = document.getElementById('detailTitle');
   const detailImages = document.getElementById('detailImages');
   const detailButtons = document.getElementById('detailButtons');
 
-  // Título grande
   detailTitle.innerText = post.title;
 
-  // Imágenes (puedes agregar más en el array si quieres)
-  detailImages.innerHTML = `<img src="${post.image}" style="width:100%; max-width:500px; margin-bottom:20px; border-radius:10px;">`;
+  // Imagen principal + espacio para posibles imágenes extra
+  detailImages.innerHTML = `<img src="${post.image}" style="max-width:100%; margin-bottom:20px; border-radius:10px;">`;
 
-  // VIEW EPISODES
+  // VIEW EPISODES + botones al final + espacio para que no quede todo cerrado
   detailButtons.innerHTML = `
-    <h3 style="margin-bottom:15px;">VIEW EPISODES</h3>
+    <h3>VIEW EPISODES</h3>
     <a href="${post.links.english}" class="btn red" target="_blank">Sub ENGLISH</a>
     <a href="${post.links.spanish}" class="btn blue" target="_blank">Sub ESPAÑOL</a>
-    <div style="height:60px;"></div> <!-- franja vacía abajo -->
+    <div style="height: 60px;"></div>
   `;
 
   detailSection.style.display = 'block';
-  window.scrollTo({ top: 0, behavior: 'smooth' }); // asegura que la sección se vea completa
+  window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
 /* CERRAR DETALLE */
@@ -59,7 +62,7 @@ document.getElementById('closeDetail').addEventListener('click', () => {
   document.getElementById('ovaDetail').style.display = 'none';
 });
 
-/* FILTRO POR BOTONES */
+/* FILTRO POR TAG */
 function filterTag(tag) {
   const filtered = posts.filter(p => p.tags.includes(tag));
   renderPosts(filtered);
