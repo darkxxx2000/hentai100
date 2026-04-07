@@ -17,6 +17,10 @@ function renderPosts(list){
       <div class="card-content">
         <h2>${post.title}</h2>
         <div class="subtitle">${post.tags.join(' • ')}</div>
+        <div class="buttons">
+          <a href="${post.links.english}" class="btn red" target="_blank">Sub ENGLISH</a>
+          <a href="${post.links.spanish}" class="btn blue" target="_blank">Sub ESPAÑOL</a>
+        </div>
       </div>
     `;
 
@@ -36,16 +40,21 @@ function showOvaDetail(post){
   const detailImages = document.getElementById('detailImages');
   const detailButtons = document.getElementById('detailButtons');
 
+  // Título grande
   detailTitle.innerText = post.title;
 
+  // Imagen principal (puedes agregar más si quieres)
   detailImages.innerHTML = `<img src="${post.image}" style="width:300px; border-radius:10px;">`;
 
+  // Botones English/Spanish
   detailButtons.innerHTML = `
     <a href="${post.links.english}" class="btn red" target="_blank">Sub ENGLISH</a>
     <a href="${post.links.spanish}" class="btn blue" target="_blank">Sub ESPAÑOL</a>
   `;
 
+  // Mostrar sección detalle a pantalla completa
   detailSection.style.display = 'block';
+  detailSection.scrollIntoView({ behavior: 'smooth' });
 }
 
 /* CERRAR DETALLE */
