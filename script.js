@@ -1,17 +1,17 @@
-function renderPosts(list) {
-  container.innerHTML = '';
+function renderPosts(list){
+  container.innerHTML='';
 
-  list.forEach(post => {
-    const tagClass = 'border-' + post.tags[0];
+  list.forEach(post=>{
+    const tagClass='border-'+post.tags[0];
 
-    const card = document.createElement('div');
-    card.className = `card ${tagClass}`;
+    const card=document.createElement('div');
+    card.className=`card ${tagClass}`;
 
-    card.innerHTML = `
-      <img loading="lazy" src="${post.image}" onerror="this.src='https://via.placeholder.com/400x260?text=Image+Not+Found'">
+    card.innerHTML=`
+      <img loading="lazy" src="${post.image}" onerror="this.src='https://via.placeholder.com/400x300?text=No+Image'">
       <div class="card-content">
         <h2>${post.title}</h2>
-        <p>${post.description}</p>
+        <div class="subtitle">${post.tags.join(' • ')}</div>
       </div>
     `;
 
