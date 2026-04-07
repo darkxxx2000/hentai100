@@ -35,6 +35,34 @@
 <!-- DETALLE A PANTALLA COMPLETA (INTEGRADO Y RENOVADO) -->
 <section id="ovaDetail">
   <div class="detail-header">
+    <div id="logo" onclick="goHome()" style="cursor:pointer; font-family:'Orbitron'; font-size:28px;">
+      OVA Directory
+    </div>
+    <button id="closeDetail">X Close</button>
+  </div>
+
+  <h2 id="detailTitle" class="detail-title"></h2>
+  <hr class="detail-line">
+
+  <div class="detail-body">
+    <div class="main-image">
+      <img id="detailMainImage" src="" alt="">
+    </div>
+
+    <div class="right-column">
+      <div id="detailDescription"></div>
+      <div class="thumbs-container" id="detailThumbnails"></div>
+    </div>
+  </div>
+
+  <h3 class="view-episodes">VIEW EPISODES</h3>
+
+  <!-- ESTE DIV VA VACÍO. TU JS LO LLENA -->
+  <div id="detailButtons"></div>
+
+  <div class="bottom-space"></div>
+</section>
+  <div class="detail-header">
     <div id="logo" onclick="goHome()" style="cursor:pointer; font-family:'Orbitron'; font-size:28px;">OVA Directory</div>
     <button id="closeDetail">X Close</button>
   </div>
