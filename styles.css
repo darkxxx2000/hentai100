@@ -236,3 +236,36 @@ footer{
 .bottom-space{
   height:120px;
 }
+/* BOTONES RECTANGULARES VISUALES */
+#detailButtons{
+  text-align:center;
+  margin-top:20px;
+}
+
+#detailButtons button{
+  width:200px;
+  padding:14px 0;
+  margin:0 15px;
+  border-radius:10px;
+  border:none;
+  font-family:'Orbitron';
+  font-size:15px;
+  letter-spacing:1px;
+  cursor:pointer;
+  transition:0.2s;
+  box-shadow:0 0 12px rgba(0,0,0,0.4);
+}
+
+#detailButtons .sub-en{
+  background:#ff0000;
+  color:white;
+}
+
+#detailButtons .sub-es{
+  background:#007bff;
+  color:white;
+}
+
+#detailButtons button:hover{
+  transform:scale(1.05);
+}
