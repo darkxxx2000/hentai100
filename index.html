@@ -3,10 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <title>OVA Directory</title>
-
 <link rel="stylesheet" href="styles.css">
 <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
@@ -34,24 +32,38 @@
 <!-- GRID PRINCIPAL -->
 <main id="postsContainer"></main>
 
-<!-- DETALLE PANTALLA COMPLETA -->
+<!-- DETALLE A PANTALLA COMPLETA -->
 <section id="ovaDetail">
   <div class="detail-header">
-    <div id="logo" onclick="goHome()" style="cursor:pointer; font-family:'Orbitron'; font-size:24px;">OVA Directory</div>
+    <div id="logo" onclick="goHome()" style="cursor:pointer; font-family:'Orbitron'; font-size:28px;">OVA Directory</div>
     <button id="closeDetail">X Close</button>
   </div>
 
+  <!-- TÍTULO DE LA OVA -->
+  <h2 id="detailTitle" class="detail-title"></h2>
+  <hr class="detail-line">
+
   <div class="detail-body">
+    <!-- IMAGEN PRINCIPAL -->
     <div class="main-image">
       <img id="detailMainImage" src="" alt="">
     </div>
+
+    <!-- MINIATURAS A LA DERECHA -->
     <div class="thumbs-container" id="detailThumbnails"></div>
   </div>
 
+  <!-- DESCRIPCIÓN -->
   <div id="detailDescription"></div>
-  <h3 style="text-align:center;">VIEW EPISODES</h3>
+
+  <!-- VIEW EPISODES -->
+  <h3 style="text-align:center; margin-top:20px;">VIEW EPISODES</h3>
+
+  <!-- BOTONES -->
   <div id="detailButtons"></div>
-  <div style="height:50px;"></div>
+
+  <!-- FRANJA VACÍA -->
+  <div style="height:60px;"></div>
 </section>
 
 <footer>
@@ -69,13 +81,12 @@
 <script src="data.js"></script>
 <script src="script.js"></script>
 
-<!-- ===== POPADS ZONE ===== -->
+<!-- POPADS -->
 <script type="text/javascript">
   var _pop = _pop || [];
   _pop.push(['siteId', 'PON_AQUI_TU_SITE_ID']);
 </script>
 <script src="https://c1.popads.net/pop.js"></script>
-<!-- ===================== -->
 
 </body>
 </html>
