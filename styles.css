@@ -337,3 +337,45 @@ footer{
 #detailButtons a:hover{
   transform:scale(1.05);
 }
+/* ================= INICIO / GRID PRINCIPAL ================= */
+
+#postsContainer{
+  display:grid;
+  grid-template-columns:repeat(auto-fill, minmax(220px, 1fr));
+  gap:40px;
+  padding:40px;
+}
+
+/* Cada tarjeta */
+.post-card{
+  text-align:center;
+  cursor:pointer;
+}
+
+/* Imagen vertical protagonista */
+.post-card img{
+  width:100%;
+  height:330px;
+  object-fit:cover;
+  border-radius:6px;
+  box-shadow:0 0 12px rgba(0,0,0,0.5);
+  transition:0.2s;
+}
+
+.post-card img:hover{
+  transform:scale(1.04);
+}
+
+/* Título */
+.post-card h3{
+  font-family:'Orbitron';
+  font-size:18px;
+  margin-top:12px;
+  margin-bottom:4px;
+}
+
+/* Género chico */
+.post-card span{
+  font-size:13px;
+  opacity:0.7;
+}
