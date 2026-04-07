@@ -115,7 +115,7 @@ footer{
   color:#000;
 }
 
-/* DETALLE A PANTALLA COMPLETA */
+/* DETALLE PANTALLA COMPLETA */
 #ovaDetail{
   display:none;
   position:fixed;
@@ -142,10 +142,21 @@ footer{
   border-radius:5px;
 }
 
+#detailImages img{
+  width:300px;
+  border-radius:10px;
+  margin:10px;
+}
+
+#detailDescription{
+  margin-top:20px;
+  line-height:1.5;
+}
+
 /* BOTONES */
 .btn{
   padding:10px 20px;
-  margin-right:10px;
+  margin:10px 10px 0 0;
   border-radius:5px;
   text-decoration:none;
   font-weight:bold;
