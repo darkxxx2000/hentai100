@@ -1,4 +1,4 @@
-/* DETALLE A PANTALLA COMPLETA */
+/* DETALLE PANTALLA COMPLETA */
 #ovaDetail {
   display: none;
   position: fixed;
@@ -9,8 +9,8 @@
   background: #1a1a2e;
   color: white;
   overflow-y: auto;
-  z-index: 1000;
   padding: 40px;
+  z-index: 999;
 }
 
 #closeDetail {
@@ -18,30 +18,22 @@
   top: 20px;
   right: 20px;
   background: #ff0000;
-  color: white;
-  border: none;
   padding: 10px 15px;
+  border: none;
+  color: white;
   cursor: pointer;
   border-radius: 5px;
 }
 
 #detailImages img {
-  display: block;
-  margin: 0 auto 20px auto;
-}
-
-#detailButtons {
-  text-align: center;
+  margin-bottom: 20px;
 }
 
 #detailButtons a {
-  margin: 0 10px;
-  padding: 10px 20px;
-  border-radius: 5px;
-  text-decoration: none;
-  font-weight: bold;
-  color: white;
+  margin-right: 10px;
 }
 
-#detailButtons .red { background: #ff0000; }
-#detailButtons .blue { background: #007bff; }
+/* Espacio final en detalle */
+#detailButtons div {
+  height: 60px;
+}
