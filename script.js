@@ -17,10 +17,6 @@ function renderPosts(list){
       <div class="card-content">
         <h2>${post.title}</h2>
         <div class="subtitle">${post.tags.join(' • ')}</div>
-        <div class="buttons">
-          <a href="${post.links.english}" class="btn red" target="_blank">Sub ENGLISH</a>
-          <a href="${post.links.spanish}" class="btn blue" target="_blank">Sub ESPAÑOL</a>
-        </div>
       </div>
     `;
 
@@ -38,41 +34,30 @@ function showOvaDetail(post){
   const detailSection = document.getElementById('ovaDetail');
   const detailTitle = document.getElementById('detailTitle');
   const detailImages = document.getElementById('detailImages');
-  const detailDescription = document.getElementById('detailDescription');
   const detailButtons = document.getElementById('detailButtons');
+  const detailDescription = document.getElementById('detailDescription');
 
-  // Título grande
   detailTitle.innerText = post.title;
 
-  // Contenedor de imágenes
+  // Mostrar todas las imágenes
   detailImages.innerHTML = '';
-  if(Array.isArray(post.images) && post.images.length > 0){
-    post.images.forEach(imgUrl=>{
-      const img = document.createElement('img');
-      img.src = imgUrl;
-      img.style.width = "300px";
-      img.style.borderRadius = "10px";
-      img.style.marginRight = "10px";
-      detailImages.appendChild(img);
-    });
-  } else {
-    // Solo la imagen principal si no hay más
-    detailImages.innerHTML = `<img src="${post.image}" style="width:300px; border-radius:10px;">`;
-  }
+  post.images.forEach(imgUrl=>{
+    const img = document.createElement('img');
+    img.src = imgUrl;
+    detailImages.appendChild(img);
+  });
 
-  // Descripción
+  // Mostrar descripción
   detailDescription.innerHTML = post.description || '';
 
-  // Botones English/Spanish
+  // Botones
   detailButtons.innerHTML = `
-    <h3>VIEW EPISODES</h3>
     <a href="${post.links.english}" class="btn red" target="_blank">Sub ENGLISH</a>
     <a href="${post.links.spanish}" class="btn blue" target="_blank">Sub ESPAÑOL</a>
   `;
 
-  // Mostrar sección detalle a pantalla completa
+  // Mostrar sección
   detailSection.style.display = 'block';
-  detailSection.scrollIntoView({ behavior: 'smooth' });
 }
 
 /* CERRAR DETALLE */
