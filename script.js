@@ -18,6 +18,11 @@ function renderPosts(list){
       <div class="card-content">
         <h2>${post.title}</h2>
         <div class="subtitle">${post.tags.join(' • ')}</div>
+        <div class="view-episodes">${post.subtitle}</div>
+        <div class="buttons">
+          <a href="${post.links.english}" class="btn red">Sub ENGLISH</a>
+          <a href="${post.links.spanish}" class="btn blue">Sub ESPAÑOL</a>
+        </div>
       </div>
     `;
 
