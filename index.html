@@ -3,20 +3,15 @@
 <head>
 <meta charset="UTF-8">
 <title>OVA Directory</title>
-
 <link rel="stylesheet" href="styles.css">
 <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
-
 <body>
 
 <header>
   <h1>OVA Directory</h1>
-
   <input type="text" id="searchInput" placeholder="Search by title, genre, tags...">
-
   <div class="filters">
     <button onclick="filterTag('tentacles')">Tentacles</button>
     <button onclick="filterTag('monster')">Monster</button>
@@ -31,7 +26,6 @@
   </div>
 </header>
 
-<!-- GRID PRINCIPAL -->
 <main id="postsContainer"></main>
 
 <!-- DETALLE A PANTALLA COMPLETA -->
@@ -40,31 +34,30 @@
   <h1 id="detailTitle"></h1>
   <hr>
   <div id="detailImages"></div>
+  <h3>VIEW EPISODES</h3>
   <div id="detailButtons"></div>
+  <div style="height:50px;"></div> <!-- franja vacía -->
 </section>
 
 <footer>
   <div class="legal">
-    <a href="#">Terms & Conditions</a>
-    <a href="#">Privacy Policy</a>
     <a href="#">Usage</a>
+    <a href="#">Privacy Policy</a>
+    <a href="#">Terms & Conditions</a>
     <a href="#">Contact</a>
-  </div>
-  <div class="counter">
-    Visitors: <span id="visitCount">0</span>
+    <span class="counter">Visitors: <span id="visitCount">0</span></span>
   </div>
 </footer>
 
 <script src="data.js"></script>
 <script src="script.js"></script>
 
-<!-- ===== POPADS ZONE ===== -->
+<!-- POPADS -->
 <script type="text/javascript">
   var _pop = _pop || [];
   _pop.push(['siteId', 'PON_AQUI_TU_SITE_ID']);
 </script>
 <script src="https://c1.popads.net/pop.js"></script>
-<!-- ===================== -->
 
 </body>
 </html>
