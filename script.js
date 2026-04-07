@@ -38,16 +38,34 @@ function showOvaDetail(post){
   const detailSection = document.getElementById('ovaDetail');
   const detailTitle = document.getElementById('detailTitle');
   const detailImages = document.getElementById('detailImages');
+  const detailDescription = document.getElementById('detailDescription');
   const detailButtons = document.getElementById('detailButtons');
 
   // Título grande
   detailTitle.innerText = post.title;
 
-  // Imagen principal (puedes agregar más si quieres)
-  detailImages.innerHTML = `<img src="${post.image}" style="width:300px; border-radius:10px;">`;
+  // Contenedor de imágenes
+  detailImages.innerHTML = '';
+  if(Array.isArray(post.images) && post.images.length > 0){
+    post.images.forEach(imgUrl=>{
+      const img = document.createElement('img');
+      img.src = imgUrl;
+      img.style.width = "300px";
+      img.style.borderRadius = "10px";
+      img.style.marginRight = "10px";
+      detailImages.appendChild(img);
+    });
+  } else {
+    // Solo la imagen principal si no hay más
+    detailImages.innerHTML = `<img src="${post.image}" style="width:300px; border-radius:10px;">`;
+  }
+
+  // Descripción
+  detailDescription.innerHTML = post.description || '';
 
   // Botones English/Spanish
   detailButtons.innerHTML = `
+    <h3>VIEW EPISODES</h3>
     <a href="${post.links.english}" class="btn red" target="_blank">Sub ENGLISH</a>
     <a href="${post.links.spanish}" class="btn blue" target="_blank">Sub ESPAÑOL</a>
   `;
