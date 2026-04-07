@@ -31,15 +31,17 @@
   </div>
 </header>
 
+<!-- GRID PRINCIPAL -->
 <main id="postsContainer"></main>
 
-<!-- Sección de detalle de OVA -->
-<section id="ovaDetail" style="display:none; padding:40px 60px; background:#1a1a2e; color:white;">
-  <h2 id="detailTitle"></h2>
-  <hr style="margin:20px 0; border-color:#444;">
-  <div id="detailImages" style="display:flex; gap:20px; flex-wrap:wrap;"></div>
-  <h3 style="margin-top:20px;">VIEW EPISODES</h3>
-  <div id="detailButtons" style="margin-top:10px;"></div>
+<!-- DETALLE A PANTALLA COMPLETA -->
+<section id="ovaDetail">
+  <button id="closeDetail">X Close</button>
+  <h1 id="detailTitle"></h1>
+  <hr>
+  <div id="detailImages"></div>
+  <h3>VIEW EPISODES</h3>
+  <div id="detailButtons"></div>
 </section>
 
 <footer>
@@ -63,6 +65,7 @@
   _pop.push(['siteId', 'PON_AQUI_TU_SITE_ID']);
 </script>
 <script src="https://c1.popads.net/pop.js"></script>
+<!-- ===================== -->
 
 </body>
 </html>
