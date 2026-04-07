@@ -4,28 +4,33 @@ const input = document.getElementById('searchInput');
 /* RENDER TARJETAS */
 function renderPosts(list){
   container.innerHTML = '';
+
   list.forEach(post=>{
     const tagClass = 'border-' + post.color;
+
     const card = document.createElement('div');
     card.className = `card ${tagClass}`;
+
     card.innerHTML = `
-      <img loading="lazy" src="${post.image}" onerror="this.src='https://via.placeholder.com/400x300?text=No+Image'">
+      <img loading="lazy" src="${post.image}"
+           onerror="this.src='https://via.placeholder.com/400x300?text=No+Image'">
       <div class="card-content">
         <h2>${post.title}</h2>
         <div class="subtitle">${post.tags.join(' • ')}</div>
-        <div class="buttons">
-          <a href="${post.links.english}" class="btn red" target="_blank">Sub ENGLISH</a>
-          <a href="${post.links.spanish}" class="btn blue" target="_blank">Sub ESPAÑOL</a>
-        </div>
       </div>
     `;
+
+    // CLICK EN IMAGEN -> DETALLE PANTALLA COMPLETA
     card.querySelector('img').addEventListener('click', ()=> showOvaDetail(post));
+
     container.appendChild(card);
   });
 }
 
-/* MOSTRAR DETALLE */
+/* FUNCION MOSTRAR DETALLE */
 function showOvaDetail(post){
+  document.getElementById('postsContainer').style.display = 'none';
+  
   const detailSection = document.getElementById('ovaDetail');
   document.getElementById('detailMainImage').src = post.image;
 
@@ -41,10 +46,8 @@ function showOvaDetail(post){
     });
   }
 
-  // descripción
   document.getElementById('detailDescription').innerText = post.description || "No description available.";
 
-  // botones
   document.getElementById('detailButtons').innerHTML = `
     <a href="${post.links.english}" class="btn red" target="_blank">Sub ENGLISH</a>
     <a href="${post.links.spanish}" class="btn blue" target="_blank">Sub ESPAÑOL</a>
@@ -54,7 +57,17 @@ function showOvaDetail(post){
 }
 
 /* CERRAR DETALLE */
-document.getElementById('closeDetail').addEventListener('click', ()=> document.getElementById('ovaDetail').style.display='none');
+document.getElementById('closeDetail').addEventListener('click', ()=>{
+  document.getElementById('ovaDetail').style.display = 'none';
+  document.getElementById('postsContainer').style.display = 'grid';
+});
+
+/* LOGO -> HOME */
+function goHome(){
+  document.getElementById('ovaDetail').style.display='none';
+  document.getElementById('postsContainer').style.display = 'grid';
+  window.scrollTo({top:0, behavior:'smooth'});
+}
 
 /* FILTRO POR BOTONES */
 function filterTag(tag){
@@ -72,13 +85,7 @@ input.addEventListener('keyup', e=>{
   renderPosts(filtered);
 });
 
-/* LOGO AL INICIO */
-function goHome(){
-  document.getElementById('ovaDetail').style.display='none';
-  window.scrollTo({top:0, behavior:'smooth'});
-}
-
-/* CONTADOR VISITAS */
+/* CONTADOR DE VISITAS */
 let count = localStorage.getItem('visits') || 0;
 count++;
 localStorage.setItem('visits', count);
