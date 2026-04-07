@@ -20,11 +20,24 @@ function renderPosts(list){
         <div class="subtitle">${post.tags.join(' • ')}</div>
         <div class="view-episodes">${post.subtitle}</div>
         <div class="buttons">
-          <a href="${post.links.english}" class="btn red">Sub ENGLISH</a>
-          <a href="${post.links.spanish}" class="btn blue">Sub ESPAÑOL</a>
+          <a href="${post.links.english}" class="btn red" target="_blank">Sub ENGLISH</a>
+          <a href="${post.links.spanish}" class="btn blue" target="_blank">Sub ESPAÑOL</a>
         </div>
       </div>
     `;
+
+    // CLICK PARA MOSTRAR SECCIÓN DETALLE
+    card.addEventListener('click', ()=>{
+      const detailSection = document.getElementById('detailSection');
+      document.getElementById('detailTitle').innerText = post.title;
+      document.getElementById('detailImage').src = post.image;
+      document.getElementById('detailSubtitle').innerText = post.subtitle;
+      document.getElementById('detailEnglish').href = post.links.english;
+      document.getElementById('detailSpanish').href = post.links.spanish;
+
+      detailSection.style.display = 'block';
+      detailSection.scrollIntoView({ behavior: 'smooth' });
+    });
 
     container.appendChild(card);
   });
