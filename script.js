@@ -41,7 +41,7 @@ function showOvaDetail(post){
 
   // Mostrar todas las imágenes
   detailImages.innerHTML = '';
-  post.images.forEach(imgUrl=>{
+  (post.images || [post.image]).forEach(imgUrl=>{
     const img = document.createElement('img');
     img.src = imgUrl;
     detailImages.appendChild(img);
@@ -50,10 +50,11 @@ function showOvaDetail(post){
   // Mostrar descripción
   detailDescription.innerHTML = post.description || '';
 
-  // Botones
+  // Botones debajo de VIEW EPISODES
   detailButtons.innerHTML = `
     <a href="${post.links.english}" class="btn red" target="_blank">Sub ENGLISH</a>
     <a href="${post.links.spanish}" class="btn blue" target="_blank">Sub ESPAÑOL</a>
+    <div style="height:50px;"></div> <!-- franja vacía abajo -->
   `;
 
   // Mostrar sección
