@@ -1,61 +1,47 @@
-/* DETALLE PANTALLA COMPLETA */
-#ovaDetail{
-  display:none;
-  position:fixed;
-  top:0;
-  left:0;
-  width:100%;
-  height:100%;
-  background:#1a1a2e;
-  color:white;
-  overflow-y:auto;
-  z-index:1000;
-  padding:40px;
+/* DETALLE A PANTALLA COMPLETA */
+#ovaDetail {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #1a1a2e;
+  color: white;
+  overflow-y: auto;
+  z-index: 1000;
+  padding: 40px;
 }
 
-#closeDetail{
-  position:absolute;
-  top:20px;
-  right:20px;
-  background:#ff0000;
-  color:white;
-  border:none;
-  padding:10px 15px;
-  cursor:pointer;
-  border-radius:5px;
+#closeDetail {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: #ff0000;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 5px;
 }
 
-#detailImages img{
-  width:300px;
-  border-radius:10px;
-  margin:10px;
+#detailImages img {
+  display: block;
+  margin: 0 auto 20px auto;
 }
 
-#detailSubtitle{
-  margin-top:20px;
-  font-size:18px;
-  font-weight:bold;
+#detailButtons {
+  text-align: center;
 }
 
-/* BOTONES DETALLE */
-#detailButtons{
-  margin-top:15px;
+#detailButtons a {
+  margin: 0 10px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  color: white;
 }
 
-/* BOTONES */
-.btn{
-  padding:10px 20px;
-  margin:10px 10px 0 0;
-  border-radius:5px;
-  text-decoration:none;
-  font-weight:bold;
-  color:white;
-}
-
-.red{background:#ff0000;}
-.blue{background:#007bff;}
-
-/* GRID INICIAL */
-.card-buttons{
-  margin-top:10px;
-}
+#detailButtons .red { background: #ff0000; }
+#detailButtons .blue { background: #007bff; }
