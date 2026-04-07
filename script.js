@@ -17,6 +17,12 @@ function renderPosts(list){
       <div class="card-content">
         <h2>${post.title}</h2>
         <div class="subtitle">${post.tags.join(' • ')}</div>
+
+        <!-- BOTONES INICIALES -->
+        <div class="card-buttons">
+          <a href="${post.links.english}" class="btn red" target="_blank">Sub ENGLISH</a>
+          <a href="${post.links.spanish}" class="btn blue" target="_blank">Sub ESPAÑOL</a>
+        </div>
       </div>
     `;
 
@@ -35,29 +41,31 @@ function showOvaDetail(post){
   const detailTitle = document.getElementById('detailTitle');
   const detailImages = document.getElementById('detailImages');
   const detailButtons = document.getElementById('detailButtons');
-  const detailDescription = document.getElementById('detailDescription');
+  const detailSubtitle = document.getElementById('detailSubtitle');
 
   detailTitle.innerText = post.title;
 
-  // Mostrar todas las imágenes
+  // Imagen o imágenes en detalle
   detailImages.innerHTML = '';
   (post.images || [post.image]).forEach(imgUrl=>{
     const img = document.createElement('img');
     img.src = imgUrl;
+    img.style.width = '300px';
+    img.style.borderRadius = '10px';
+    img.style.margin = '10px';
     detailImages.appendChild(img);
   });
 
-  // Mostrar descripción
-  detailDescription.innerHTML = post.description || '';
+  // Subtitle VIEW EPISODES
+  detailSubtitle.innerText = post.subtitle || "VIEW EPISODES";
 
-  // Botones debajo de VIEW EPISODES
+  // BOTONES ABAJO DE VIEW EPISODES + franja vacía
   detailButtons.innerHTML = `
     <a href="${post.links.english}" class="btn red" target="_blank">Sub ENGLISH</a>
     <a href="${post.links.spanish}" class="btn blue" target="_blank">Sub ESPAÑOL</a>
-    <div style="height:50px;"></div> <!-- franja vacía abajo -->
+    <div style="height:50px;"></div>
   `;
 
-  // Mostrar sección
   detailSection.style.display = 'block';
 }
 
