@@ -63,8 +63,9 @@ main{
 /* IMAGEN */
 .card img{
   width:100%;
-  height:300px;
-  object-fit:cover;
+  height:450px;          /* formato vertical clásico */
+  object-fit:cover;      /* recorta la imagen para llenar el contenedor */
+  object-position:top;   /* centramos la parte superior (por si hay personajes) */
 }
 
 /* CONTENIDO */
