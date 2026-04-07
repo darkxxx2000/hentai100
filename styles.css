@@ -85,6 +85,39 @@ main{
   letter-spacing:1px;
 }
 
+/* VIEW EPISODES */
+.card .view-episodes{
+  margin-top:10px;
+  font-weight:bold;
+  font-size:14px;
+  color:#ffd700;
+}
+
+/* BOTONES SUBS */
+.buttons {
+  margin-top: 12px;
+  display: flex;
+  gap: 10px;
+}
+
+.btn {
+  padding: 8px 14px;
+  border-radius: 6px;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  font-size: 14px;
+  transition: 0.2s;
+}
+
+.btn.red { background: #ff0000; }
+.btn.blue { background: #0066ff; }
+
+.btn:hover {
+  opacity: 0.8;
+  transform: scale(1.05);
+}
+
 /* BORDES BRILLANTES SEGÚN CATEGORÍA */
 .border-tentacles { box-shadow:0 0 25px #00ff66; }  /* verde */
 .border-monster   { box-shadow:0 0 25px #0080ff; }  /* azul */
