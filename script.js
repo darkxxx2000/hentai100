@@ -1,6 +1,7 @@
 const container = document.getElementById('postsContainer');
 const input = document.getElementById('searchInput');
 
+/* RENDER TARJETAS */
 function renderPosts(list){
   container.innerHTML = '';
 
@@ -19,7 +20,7 @@ function renderPosts(list){
       </div>
     `;
 
-    // Al hacer click en la imagen, mostrar detalle en otra sección
+    // CLICK EN IMAGEN -> DETALLE PANTALLA COMPLETA
     card.querySelector('img').addEventListener('click', ()=>{
       showOvaDetail(post);
     });
@@ -28,7 +29,7 @@ function renderPosts(list){
   });
 }
 
-/* FUNCION PARA MOSTRAR DETALLE DEL OVA */
+/* FUNCION MOSTRAR DETALLE */
 function showOvaDetail(post){
   const detailSection = document.getElementById('ovaDetail');
   const detailTitle = document.getElementById('detailTitle');
@@ -37,7 +38,6 @@ function showOvaDetail(post){
 
   detailTitle.innerText = post.title;
 
-  // Ejemplo: si quieres mostrar más imágenes, aquí puedes agregar un array post.images
   detailImages.innerHTML = `<img src="${post.image}" style="width:300px; border-radius:10px;">`;
 
   detailButtons.innerHTML = `
@@ -46,10 +46,12 @@ function showOvaDetail(post){
   `;
 
   detailSection.style.display = 'block';
-
-  // Scroll suave hacia la sección de detalle
-  detailSection.scrollIntoView({behavior:'smooth'});
 }
+
+/* CERRAR DETALLE */
+document.getElementById('closeDetail').addEventListener('click', ()=>{
+  document.getElementById('ovaDetail').style.display = 'none';
+});
 
 /* FILTRO POR BOTONES */
 function filterTag(tag){
