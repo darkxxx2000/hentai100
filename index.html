@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>OVA Directory</title>
+<link rel="stylesheet" href="styles.css">
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header>
+  <h1>OVA Directory</h1>
+
+  <input type="text" id="searchInput" placeholder="Search by title, genre, tags...">
+
+  <div class="filters">
+    <button onclick="filterTag('tentacles')">Tentacles</button>
+    <button onclick="filterTag('monster')">Monster</button>
+    <button onclick="filterTag('machine')">Machine</button>
+    <button onclick="filterTag('3d')">3D</button>
+  </div>
+</header>
+
+<main id="postsContainer"></main>
+
+<footer>
+  <div class="legal">
+    <a href="#">Terms & Conditions</a>
+    <a href="#">Privacy Policy</a>
+    <a href="#">Usage</a>
+    <a href="#">Contact</a>
+  </div>
+  <div class="counter">Visitors: <span id="visitCount">0</span></div>
+</footer>
+
+<script src="data.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
