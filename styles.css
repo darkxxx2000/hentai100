@@ -155,7 +155,7 @@ footer{
   margin:0 0 30px 0;
 }
 
-/* BODY DETALLE: PORTADA + GALERÍA */
+/* BODY DETALLE */
 .detail-body{
   display:flex;
   gap:40px;
@@ -169,12 +169,25 @@ footer{
   border-radius:10px;
 }
 
+/* COLUMNA DERECHA */
+.right-column{
+  display:flex;
+  flex-direction:column;
+  flex:1;
+}
+
+/* DESCRIPCIÓN ARRIBA */
+.right-column #detailDescription{
+  margin-bottom:20px;
+  font-size:17px;
+  line-height:1.6;
+}
+
 /* GALERÍA 4 POR FILA */
 .thumbs-container{
   display:grid;
   grid-template-columns:repeat(4, 1fr);
   gap:15px;
-  flex:1;
 }
 
 .thumbs-container img{
@@ -190,15 +203,7 @@ footer{
   transform:scale(1.05);
 }
 
-/* DESCRIPCIÓN DEBAJO CON AIRE */
-#detailDescription{
-  margin:40px 0;
-  max-width:1000px;
-  font-size:17px;
-  line-height:1.6;
-}
-
-/* VIEW EPISODES CENTRADO */
+/* VIEW EPISODES */
 .view-episodes{
   text-align:center;
   margin-top:10px;
@@ -227,7 +232,7 @@ footer{
 .sub-en{ background:#ff0000; }
 .sub-es{ background:#007bff; }
 
-/* FRANJA VACÍA FINAL */
+/* FRANJA VACÍA */
 .bottom-space{
   height:120px;
 }
