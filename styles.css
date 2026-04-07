@@ -269,3 +269,71 @@ footer{
 #detailButtons button:hover{
   transform:scale(1.05);
 }
+/* ====== LAYOUT DEL DETALLE ====== */
+
+.detail-body{
+  display:flex;
+  gap:40px;
+  align-items:flex-start;
+  margin-top:30px;
+}
+
+.main-image img{
+  width:380px;
+  border-radius:6px;
+  box-shadow:0 0 15px rgba(0,0,0,0.5);
+}
+
+.right-column{
+  flex:1;
+  display:flex;
+  flex-direction:column;
+}
+
+/* DESCRIPCIÓN ARRIBA A LA DERECHA */
+#detailDescription{
+  margin-bottom:20px;
+  line-height:1.6;
+}
+
+/* GALERÍA DE THUMBS */
+.thumbs-container{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+}
+
+/* ====== BOTONES QUE CREA TU JS ====== */
+
+#detailButtons{
+  text-align:center;
+  margin-top:25px;
+}
+
+#detailButtons a{
+  display:inline-block;
+  width:220px;
+  padding:14px 0;
+  margin:0 15px;
+  border-radius:10px;
+  font-family:'Orbitron';
+  font-size:15px;
+  letter-spacing:1px;
+  text-decoration:none;
+  color:#fff;
+  transition:0.2s;
+  box-shadow:0 0 12px rgba(0,0,0,0.4);
+}
+
+/* Colores pedidos */
+#detailButtons .red{
+  background:#ff0000;
+}
+
+#detailButtons .blue{
+  background:#007bff;
+}
+
+#detailButtons a:hover{
+  transform:scale(1.05);
+}
