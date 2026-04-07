@@ -8,13 +8,15 @@ const posts = [
 },
 {
   title: "Romantic Ecchi Story",
-  image: "https://...",
+  image: "https://i.postimg.cc/xxxx/romantic-ecchi.jpg",
   tags: ["romantico","ecchi"],
   color: "romantico"
 },
 {
   title: "Mechanical Obsession",
-  image: "https://...",
+  image: "https://i.postimg.cc/xxxx/mechanical-obsession.jpg",
   tags: ["machine"],
   color: "machine"
 }
+
+];
