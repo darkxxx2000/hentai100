@@ -235,3 +235,27 @@ footer{
 .bottom-space{
   height:100px;
 }
+@media(max-width:1100px){
+  .detail-body{
+    flex-direction:column;
+  }
+
+  .main-image img{
+    width:100%;
+    max-width:420px;
+  }
+
+  .thumbs-container{
+    grid-template-columns:repeat(3,1fr);
+  }
+}
+
+@media(max-width:700px){
+  main{
+    grid-template-columns:1fr;
+  }
+
+  .thumbs-container{
+    grid-template-columns:repeat(2,1fr);
+  }
+}
