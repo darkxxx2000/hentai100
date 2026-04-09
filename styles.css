@@ -242,4 +242,44 @@ footer{
     grid-template-columns:repeat(2,1fr);
   }
 }
+/* ===== HOME CARDS CORRECTAS ===== */
+.post-card{
+  max-width:260px;
+  margin:auto;
+}
 
+.post-card img{
+  width:100%;
+  height:380px;        /* vertical preview */
+  object-fit:cover;
+  object-position:top;
+  border-radius:10px;
+}
+/* ===== MOBILE FIX ===== */
+@media(max-width:900px){
+
+  main{
+    grid-template-columns:1fr;
+    padding:20px;
+  }
+
+  .detail-body{
+    flex-direction:column;
+  }
+
+  .main-image img{
+    width:100%;
+    max-width:100%;
+  }
+
+  .thumbs-container{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  #detailButtons .sub-en,
+  #detailButtons .sub-es{
+    width:90%;
+    margin:10px auto;
+    display:block;
+  }
+}
