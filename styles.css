@@ -282,3 +282,25 @@ footer {
     padding: clamp(10px, 5vw, 30px);
   }
 }
+/* Galería más cuadrada y centrada */
+.thumbs-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 por fila */
+  gap: 12px;
+  justify-content: center; /* centra toda la galería */
+  max-width: 900px;       /* limita el ancho total */
+  margin: 0 auto;          /* centra la galería en la pantalla */
+}
+
+.thumbs-container img {
+  width: 100%;
+  aspect-ratio: 4/3;       /* más cuadrada y ligeramente vertical */
+  object-fit: cover;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.thumbs-container img:hover {
+  transform: scale(1.05);
+}
