@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <title>OVA Directory</title>
 <link rel="stylesheet" href="styles.css">
-<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&family=Inter:wght@300;400;600&display=swap" rel="stylesheet"> 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
@@ -32,8 +32,9 @@
 <!-- GRID PRINCIPAL -->
 <main id="postsContainer"></main>
 
-<!-- DETALLE A PANTALLA COMPLETA (INTEGRADO Y RENOVADO) -->
+<!-- DETALLE -->
 <section id="ovaDetail">
+
   <div class="detail-header">
     <div id="logo" onclick="goHome()" style="cursor:pointer; font-family:'Orbitron'; font-size:28px;">
       OVA Directory
@@ -57,44 +58,11 @@
 
   <h3 class="view-episodes">VIEW EPISODES</h3>
 
-  <!-- ESTE DIV VA VACÍO. TU JS LO LLENA -->
+  <!-- JS llena esto -->
   <div id="detailButtons"></div>
 
   <div class="bottom-space"></div>
-</section>
-  <div class="detail-header">
-    <div id="logo" onclick="goHome()" style="cursor:pointer; font-family:'Orbitron'; font-size:28px;">OVA Directory</div>
-    <button id="closeDetail">X Close</button>
-  </div>
 
-  <!-- TÍTULO DE LA OVA -->
-  <h2 id="detailTitle" class="detail-title"></h2>
-  <hr class="detail-line">
-
-  <div class="detail-body">
-    <!-- PORTADA -->
-    <div class="main-image">
-      <img id="detailMainImage" src="" alt="">
-    </div>
-
-    <!-- COLUMNA DERECHA -->
-    <div class="right-column">
-      <div id="detailDescription"></div>
-      <div class="thumbs-container" id="detailThumbnails"></div>
-    </div>
-  </div>
-
-  <!-- VIEW EPISODES -->
-  <h3 class="view-episodes">VIEW EPISODES</h3>
-
-  <!-- BOTONES CENTRADOS -->
-  <div id="detailButtons">
-    <button class="sub-en">Sub ENGLISH</button>
-    <button class="sub-es">Sub ESPAÑOL</button>
-  </div>
-
-  <!-- FRANJA VACÍA -->
-  <div class="bottom-space"></div>
 </section>
 
 <footer>
