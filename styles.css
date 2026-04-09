@@ -42,9 +42,9 @@ h1 {
 #postsContainer {
   display: grid;
   grid-template-columns: repeat(3, 1fr); /* 3 tarjetas en escritorio */
-  gap: clamp(10px, 4vw, 40px);          /* gap adaptable según el ancho */
+  gap: clamp(10px, 4vw, 20px);          /* gap adaptable según el ancho */
   justify-items: center;                 /* centra las tarjetas dentro de cada celda */
-  padding: clamp(20px, 5vw, 60px);       /* padding adaptable */
+  padding: clamp(20px, 5vw, 30px);       /* padding adaptable */
 }
 
 /* ======================= TARJETAS HOME ======================= */
@@ -288,13 +288,13 @@ footer {
   grid-template-columns: repeat(3, 1fr); /* 3 por fila */
   gap: 12px;
   justify-content: center; /* centra toda la galería */
-  max-width: 900px;       /* limita el ancho total */
+  max-width: 1280px;       /* limita el ancho total */
   margin: 0 auto;          /* centra la galería en la pantalla */
 }
 
 .thumbs-container img {
   width: 100%;
-  aspect-ratio: 5/3;       /* más cuadrada y ligeramente vertical */
+  aspect-ratio: 6/3;       /* más cuadrada y ligeramente vertical */
   object-fit: cover;
   border-radius: 6px;
   cursor: pointer;
