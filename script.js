@@ -1,7 +1,15 @@
 const container = document.getElementById('postsContainer');
 const input = document.getElementById('searchInput');
 
-/* ================= RENDER INICIO LIMPIO ================= */
+/* ========= SLUG ========= */
+function slugify(text){
+  return text
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g,'-')
+    .replace(/(^-|-$)/g,'');
+}
+
+/* ================= RENDER INICIO ================= */
 function renderPosts(list){
   container.innerHTML = '';
 
@@ -16,47 +24,47 @@ function renderPosts(list){
       <span>${post.tags[0] || ''}</span>
     `;
 
-    // ✅ imagen clickeable
-    card.querySelector('img').addEventListener('click', ()=> showOvaDetail(post));
-
-    // ✅ toda la card clickeable
-    card.addEventListener('click', ()=> showOvaDetail(post));
+    card.addEventListener('click', ()=> openDetail(post));
 
     container.appendChild(card);
   });
 }
 
+/* ================= ABRIR DETALLE + URL ================= */
+function openDetail(post){
+  const slug = slugify(post.title);
+  history.pushState({slug}, '', slug);
+  showOvaDetail(post);
+}
+
 /* ================= DETALLE ================= */
 function showOvaDetail(post){
 
-  // ✅ bloquear scroll del fondo
   document.body.style.overflow = 'hidden';
 
-  document.getElementById('postsContainer').style.display = 'none';
+  container.style.display = 'none';
   const detailSection = document.getElementById('ovaDetail');
 
   document.getElementById('detailTitle').innerText = post.title;
   document.getElementById('detailMainImage').src = post.image;
 
-  // MINIATURAS (máximo 9)
   const thumbs = document.getElementById('detailThumbnails');
   thumbs.innerHTML = '';
+
   if(post.thumbnails){
     post.thumbnails.slice(0,9).forEach(url=>{
       const img = document.createElement('img');
       img.src = url;
-      img.addEventListener('click', ()=> {
+      img.addEventListener('click', ()=>{
         document.getElementById('detailMainImage').src = url;
       });
       thumbs.appendChild(img);
     });
   }
 
-  // DESCRIPCIÓN
   document.getElementById('detailDescription').innerText =
     post.description || "No description available.";
 
-  // BOTONES
   document.getElementById('detailButtons').innerHTML = `
     <button class="sub-en" onclick="window.open('${post.links.english}','_blank')">Sub ENGLISH</button>
     <button class="sub-es" onclick="window.open('${post.links.spanish}','_blank')">Sub ESPAÑOL</button>
@@ -67,14 +75,28 @@ function showOvaDetail(post){
 
 /* ================= VOLVER ================= */
 function goHome(){
+  history.pushState({}, '', '/hentai100/');
   document.getElementById('ovaDetail').style.display = 'none';
-  document.getElementById('postsContainer').style.display = 'grid';
-
-  // ✅ restaurar scroll
+  container.style.display = 'grid';
   document.body.style.overflow = 'auto';
 }
 
 document.getElementById('closeDetail').addEventListener('click', goHome);
+
+/* ================= DETECTAR URL AL ENTRAR ================= */
+function checkUrlOnLoad(){
+  const path = window.location.pathname.split('/').pop();
+
+  if(path && path !== ''){
+    const found = posts.find(p => slugify(p.title) === path);
+    if(found){
+      showOvaDetail(found);
+      return;
+    }
+  }
+
+  renderPosts(posts);
+}
 
 /* ================= FILTRO ================= */
 function filterTag(tag){
@@ -98,5 +120,10 @@ count++;
 localStorage.setItem('visits', count);
 document.getElementById('visitCount').innerText = count;
 
+/* ================= HISTORIAL ATRÁS ================= */
+window.onpopstate = function(){
+  checkUrlOnLoad();
+};
+
 /* ================= CARGA INICIAL ================= */
-renderPosts(posts);
+checkUrlOnLoad();
