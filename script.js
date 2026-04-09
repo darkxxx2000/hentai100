@@ -16,24 +16,33 @@ function renderPosts(list){
       <span>${post.tags[0] || ''}</span>
     `;
 
+    // ✅ imagen clickeable
     card.querySelector('img').addEventListener('click', ()=> showOvaDetail(post));
+
+    // ✅ toda la card clickeable
+    card.addEventListener('click', ()=> showOvaDetail(post));
+
     container.appendChild(card);
   });
 }
 
 /* ================= DETALLE ================= */
 function showOvaDetail(post){
+
+  // ✅ bloquear scroll del fondo
+  document.body.style.overflow = 'hidden';
+
   document.getElementById('postsContainer').style.display = 'none';
   const detailSection = document.getElementById('ovaDetail');
 
   document.getElementById('detailTitle').innerText = post.title;
   document.getElementById('detailMainImage').src = post.image;
 
-  // MINIATURAS
+  // MINIATURAS (máximo 9)
   const thumbs = document.getElementById('detailThumbnails');
   thumbs.innerHTML = '';
   if(post.thumbnails){
-    post.thumbnails.forEach(url=>{
+    post.thumbnails.slice(0,9).forEach(url=>{
       const img = document.createElement('img');
       img.src = url;
       img.addEventListener('click', ()=> {
@@ -47,7 +56,7 @@ function showOvaDetail(post){
   document.getElementById('detailDescription').innerText =
     post.description || "No description available.";
 
-  // BOTONES CORRECTOS
+  // BOTONES
   document.getElementById('detailButtons').innerHTML = `
     <button class="sub-en" onclick="window.open('${post.links.english}','_blank')">Sub ENGLISH</button>
     <button class="sub-es" onclick="window.open('${post.links.spanish}','_blank')">Sub ESPAÑOL</button>
@@ -60,6 +69,9 @@ function showOvaDetail(post){
 function goHome(){
   document.getElementById('ovaDetail').style.display = 'none';
   document.getElementById('postsContainer').style.display = 'grid';
+
+  // ✅ restaurar scroll
+  document.body.style.overflow = 'auto';
 }
 
 document.getElementById('closeDetail').addEventListener('click', goHome);
