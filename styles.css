@@ -45,7 +45,7 @@ main{
   padding:40px 60px;
 }
 
-/* TARJETAS */
+/* TARJETAS INICIO */
 .card{
   background:#111827;
   border-radius:14px;
@@ -54,6 +54,7 @@ main{
   flex-direction:column;
   transition:0.3s;
   border:2px solid rgba(255,255,255,0.08);
+  cursor:pointer;
 }
 .card:hover{
   transform:translateY(-6px);
@@ -130,7 +131,6 @@ footer{
   align-items:center;
 }
 
-/* BOTÓN CERRAR */
 #closeDetail{
   background:#ff0000;
   color:white;
@@ -140,13 +140,14 @@ footer{
   border-radius:5px;
 }
 
-/* DETALLE TÍTULO Y LÍNEA */
+/* TITULO DETALLE */
 .detail-title{
   font-family:'Orbitron', sans-serif;
   font-size:42px;
   text-align:left;
   margin:10px 0;
 }
+
 .detail-line{
   width:120px;
   height:3px;
@@ -160,10 +161,10 @@ footer{
   display:flex;
   gap:40px;
   align-items:flex-start;
-  margin-bottom:30px;
+  margin-bottom:25px;
 }
 
-/* PORTADA */
+/* PORTADA IZQUIERDA */
 .main-image img{
   width:420px;
   border-radius:10px;
@@ -177,39 +178,26 @@ footer{
 }
 
 /* DESCRIPCIÓN ARRIBA */
-.right-column #detailDescription{
-  margin-bottom:20px;
-  font-size:17px;
+#detailDescription{
+  font-size:16px;
   line-height:1.6;
+  margin-bottom:15px;
 }
 
-/* GALERÍA 4 POR FILA */
-/* GALERÍA DERECHA 3x3 HORIZONTAL UNIFORME */
+/* GALERÍA 3x3 TAMAÑO MEDIO */
 .thumbs-container{
   display:grid;
   grid-template-columns:repeat(3, 1fr);
-  gap:18px;
-  flex:1;
-  max-width:100%;
+  gap:12px;
 }
 
-/* TODAS MISMAS DIMENSIONES HORIZONTALES */
 .thumbs-container img{
   width:100%;
-  aspect-ratio:16/9;      /* formato horizontal perfecto */
+  height:110px;
   object-fit:cover;
-  border-radius:8px;
+  border-radius:6px;
   cursor:pointer;
   transition:0.2s;
-}
-
-/* LIMITE VISUAL A 9 IMAGENES (3x3) */
-.thumbs-container img:nth-child(n+10){
-  display:none;
-}
-
-.thumbs-container img:hover{
-  transform:scale(1.05);
 }
 
 .thumbs-container img:hover{
@@ -219,176 +207,31 @@ footer{
 /* VIEW EPISODES */
 .view-episodes{
   text-align:center;
-  margin-top:10px;
   font-family:'Orbitron';
   letter-spacing:2px;
+  margin-top:20px;
 }
 
-/* BOTONES CENTRADOS */
+/* BOTONES DETALLE */
 #detailButtons{
   text-align:center;
   margin-top:15px;
 }
 
-#detailButtons .sub-en,
-#detailButtons .sub-es{
-  padding:12px 28px;
-  margin:0 12px;
-  border:none;
-  border-radius:6px;
+#detailButtons .btn{
+  padding:12px 30px;
+  border-radius:8px;
   font-weight:bold;
-  color:white;
-  cursor:pointer;
-  font-size:15px;
-}
-
-.sub-en{ background:#ff0000; }
-.sub-es{ background:#007bff; }
-
-/* FRANJA VACÍA */
-.bottom-space{
-  height:120px;
-}
-/* BOTONES RECTANGULARES VISUALES */
-#detailButtons{
-  text-align:center;
-  margin-top:20px;
-}
-
-#detailButtons button{
-  width:200px;
-  padding:14px 0;
-  margin:0 15px;
-  border-radius:10px;
-  border:none;
-  font-family:'Orbitron';
-  font-size:15px;
-  letter-spacing:1px;
-  cursor:pointer;
-  transition:0.2s;
-  box-shadow:0 0 12px rgba(0,0,0,0.4);
-}
-
-#detailButtons .sub-en{
-  background:#ff0000;
-  color:white;
-}
-
-#detailButtons .sub-es{
-  background:#007bff;
-  color:white;
-}
-
-#detailButtons button:hover{
-  transform:scale(1.05);
-}
-/* ====== LAYOUT DEL DETALLE ====== */
-
-.detail-body{
-  display:flex;
-  gap:40px;
-  align-items:flex-start;
-  margin-top:30px;
-}
-
-.main-image img{
-  width:380px;
-  border-radius:6px;
-  box-shadow:0 0 15px rgba(0,0,0,0.5);
-}
-
-.right-column{
-  flex:1;
-  display:flex;
-  flex-direction:column;
-}
-
-/* DESCRIPCIÓN ARRIBA A LA DERECHA */
-#detailDescription{
-  margin-bottom:20px;
-  line-height:1.6;
-}
-
-/* GALERÍA DE THUMBS */
-.thumbs-container{
-  display:flex;
-  flex-wrap:wrap;
-  gap:10px;
-}
-
-/* ====== BOTONES QUE CREA TU JS ====== */
-
-#detailButtons{
-  text-align:center;
-  margin-top:25px;
-}
-
-#detailButtons a{
-  display:inline-block;
-  width:220px;
-  padding:14px 0;
-  margin:0 15px;
-  border-radius:10px;
-  font-family:'Orbitron';
-  font-size:15px;
-  letter-spacing:1px;
   text-decoration:none;
-  color:#fff;
-  transition:0.2s;
-  box-shadow:0 0 12px rgba(0,0,0,0.4);
+  color:white;
+  margin:0 10px;
+  display:inline-block;
 }
 
-/* Colores pedidos */
-#detailButtons .red{
-  background:#ff0000;
-}
+.red{ background:#ff0000; }
+.blue{ background:#007bff; }
 
-#detailButtons .blue{
-  background:#007bff;
-}
-
-#detailButtons a:hover{
-  transform:scale(1.05);
-}
-/* ================= INICIO / GRID PRINCIPAL ================= */
-
-#postsContainer{
-  display:grid;
-  grid-template-columns:repeat(auto-fill, minmax(220px, 1fr));
-  gap:40px;
-  padding:40px;
-}
-
-/* Cada tarjeta */
-.post-card{
-  text-align:center;
-  cursor:pointer;
-}
-
-/* Imagen vertical protagonista */
-.post-card img{
-  width:100%;
-  height:330px;
-  object-fit:cover;
-  border-radius:6px;
-  box-shadow:0 0 12px rgba(0,0,0,0.5);
-  transition:0.2s;
-}
-
-.post-card img:hover{
-  transform:scale(1.04);
-}
-
-/* Título */
-.post-card h3{
-  font-family:'Orbitron';
-  font-size:18px;
-  margin-top:12px;
-  margin-bottom:4px;
-}
-
-/* Género chico */
-.post-card span{
-  font-size:13px;
-  opacity:0.7;
+/* ESPACIO FINAL */
+.bottom-space{
+  height:100px;
 }
