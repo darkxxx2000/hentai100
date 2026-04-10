@@ -49,19 +49,16 @@ const posts = [
     image: "https://static.wikia.nocookie.net/taimanin/images/b/be/Taimanin_Asagi_3_OVA.jpg/revision/latest/thumbnail/width/360/height/450?cb=20201119052450",
     description: "Classic OVA about Taimanin Asagi. Ready for episodes.",
     links: {
-      english: "https://watchhentai.net/series/taimanin-asagi-id-01/",
+      english: "https://watchhentai.net/series/taimanin-asagi-3-id-01/",
       spanish: "https://hentaijk.com/taimanin-asagi/"
     },
     thumbnails: [
-      "https://via.placeholder.com/640x360?text=Extra+1",
-      "https://via.placeholder.com/640x360?text=Extra+2",
-      "https://via.placeholder.com/640x360?text=Extra+3",
-      "https://via.placeholder.com/640x360?text=Extra+4",
-      "https://via.placeholder.com/640x360?text=Extra+5",
-      "https://via.placeholder.com/640x360?text=Extra+6",
-      "https://via.placeholder.com/640x360?text=Extra+7",
-      "https://via.placeholder.com/640x360?text=Extra+8",
-      "https://via.placeholder.com/640x360?text=Extra+9"
+      "https://watchhentai.net/uploads/2022/9/taimanin-asagi-3/backdrop2.jpg",
+      "https://hentai-moon.com/contents/videos_screenshots/2000/2103/preview.mp4.jpg",
+      "https://thumb-cdn77.xvideos-cdn.com/cdc44e17-bf80-4170-92b9-feebf9d2b6a1/0/xv_26_p.jpg",
+      "https://i.redd.it/captured-by-enemy-taimanin-asagi-3-v0-qxof7nqtaktd1.gif?width=674&auto=webp&s=e590eeb930d448887855fce47214a82a161cb99e",
+      "https://i.redd.it/6ydpu9otaktd1.gif",
+      "https://media.themoviedb.org/t/p/w320_and_h180_face/htdRoH9YQvR39cIllDU9cMxmPIb.jpg"
     ]
   },
 
@@ -71,17 +68,14 @@ const posts = [
     color: "monster",
     image: "https://megahentaihd.com/wp-content/uploads/Taimanin-Asagi-Toraware-no-Niku-Ningyou.jpg",
     description: "End.",
-    links: { english: "#", spanish: "#" },
+    links: { english: "https://watchhentai.net/videos/taimanin-asagi-toraware-no-niku-ningyou-episode-1-id-01/", spanish: "https://hentaijk.com/taimanin-asagi-toraware-no-niku-ningyou/ova/" },
     thumbnails: [
-      "https://via.placeholder.com/640x360?text=04-1",
-      "https://via.placeholder.com/640x360?text=04-2",
-      "https://via.placeholder.com/640x360?text=04-3",
-      "https://via.placeholder.com/640x360?text=04-4",
-      "https://via.placeholder.com/640x360?text=04-5",
-      "https://via.placeholder.com/640x360?text=04-6",
-      "https://via.placeholder.com/640x360?text=04-7",
-      "https://via.placeholder.com/640x360?text=04-8",
-      "https://via.placeholder.com/640x360?text=04-9"
+      "https://watchhentai.net/uploads/2022/5/taimanin-asagi-toraware-no-niku-ningyou/backdrop2.jpg",
+      "https://watchhentai.net/uploads/2022/5/taimanin-asagi-toraware-no-niku-ningyou/backdrop3.jpg",
+      "https://hentaienglish.com/wp-content/uploads/2020/11/Taimanin-Asagi1.jpg.webp",
+      "https://cartoonprn.com/wp-content/uploads/2023/03/Taimanin_Asagi_Toraware_no_Niku_Ningyouepisode_1ja.png",
+      "https://e-hentai.tube/uploads/posts/2020-10/1602359840_1602151693_pic_08-1.jpg",
+      "https://cdn.hentaila.com/backdrops/720.jpg"
     ]
   },
 
