@@ -271,7 +271,7 @@ footer .legal a{
 #postsContainer{
   grid-template-columns:repeat(3, 260px); /* usa el ancho real de la card */
   justify-content:center;                 /* centra el bloque */
-  gap:14px;                              /* separación visual corta */
+  gap:16px;                              /* separación visual corta */
   padding:25px 10px 10px;
 }
 
