@@ -35,12 +35,38 @@
 <!-- DETALLE -->
 <section id="ovaDetail">
 
-  <div class="detail-header">
-    <div id="logo" onclick="goHome()" style="cursor:pointer; font-family:'Orbitron'; font-size:28px;">
-      OVA Directory
+  <div class="detail-wrapper">
+
+    <div class="detail-header">
+      <div id="logo" onclick="goHome()">OVA Directory</div>
+      <button id="closeDetail">X Close</button>
     </div>
-    <button id="closeDetail">X Close</button>
+
+    <div id="detailTitle" class="detail-title"></div>
+    <hr class="detail-line">
+
+    <div class="detail-body">
+
+      <div class="main-image">
+        <img id="detailMainImage" src="" alt="">
+      </div>
+
+      <div class="right-column">
+        <div id="detailDescription"></div>
+
+        <div id="detailThumbnails" class="thumbs-container"></div>
+
+        <div class="view-episodes">VIEW EPISODES</div>
+
+        <div id="detailButtons"></div>
+      </div>
+
+    </div>
+
+    <div class="bottom-space"></div>
+
   </div>
+</section>
 
   <h2 id="detailTitle" class="detail-title"></h2>
   <hr class="detail-line">
