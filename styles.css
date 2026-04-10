@@ -52,8 +52,8 @@ h1{
 #postsContainer{
   display:grid;
   grid-template-columns:repeat(3,1fr);
-  gap:18px; /* MENOR DISTANCIA */
-  padding:25px;
+  gap:12px; /* MENOR DISTANCIA */
+  padding:25px 25px 10px;
   justify-items:center;
 }
 
@@ -235,4 +235,35 @@ footer{
 
 @media(max-width:500px){
   #postsContainer{ grid-template-columns:1fr; }
+}
+/* ===== LINEA AZUL + POLITICAS EN HOME ===== */
+footer{
+  margin-top:70px;       /* espacio grande bajo las cards */
+  text-align:center;
+}
+
+footer::before{
+  content:'';
+  display:block;
+  height:3px;
+  background:#00aaff;    /* linea azul */
+  width:100%;
+  margin:0 auto 12px;
+}
+
+footer .legal{
+  margin-bottom:8px;
+}
+
+footer .legal a{
+  color:white;
+  text-decoration:none;
+  margin:0 14px;
+  font-size:14px;
+}
+
+/* Visitors en negro */
+.counter{
+  color:#000;
+  font-weight:bold;
 }
