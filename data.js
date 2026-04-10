@@ -29,22 +29,26 @@ const posts = [
     tags: ["monster", "hardcore"],
     color: "monster",
     image: "https://cdn.hentaijk.com/assets/images/animes/image/taimanin-asagi-2.jpg",
-    description: "Description for OVA 2",
+    description: "A year had passed since the Chaos Arena was destroyed. Asagi and Sakura now stood in an abandoned street on an artificial island floating above Tokyo Bay. It was a massive, box-shaped structure built by the government and known as the “Tokyo Kingdom.” There had once been hopes that it would become a second urban center rising from the sea, but it had failed to attract businesses.
+
+The only way to enter or leave the island was from Honshu, across the ten-kilometer Tokyo Kingdom Bridge. Unfortunately, this narrow route also became the path through which the denizens of the underworld found their way onto the island, drawing anarchists, criminals, and even illegal immigrants there, turning the sea-bound city streets into a refuge of worldwide notoriety for danger.
+
+Yet, as deserted as the streets appeared, a strange form of order still existed in that place, despite it being a breeding ground for crime.",
     links: {
       english: "https://watchhentai.net/series/taimanin-asagi-2-id-01/",
-      spanish: "https://example.com/ova2-es"
+      spanish: "https://hentaijk.com/taimanin-asagi-2/"
     },
 
     thumbnails: [
-      "https://via.placeholder.com/640x360?text=OVA2+1",
-      "https://via.placeholder.com/640x360?text=OVA2+2",
-      "https://via.placeholder.com/640x360?text=OVA2+3",
-      "https://via.placeholder.com/640x360?text=OVA2+4",
-      "https://via.placeholder.com/640x360?text=OVA2+5",
-      "https://via.placeholder.com/640x360?text=OVA2+6",
-      "https://via.placeholder.com/640x360?text=OVA2+7",
-      "https://via.placeholder.com/640x360?text=OVA2+8",
-      "https://via.placeholder.com/640x360?text=OVA2+9"
+      "https://wimg.rule34.xxx//images/1721/dcb5c69e2d93cbd2092c0b5f0987f33b136f13ac.jpeg?1861917",
+      "https://news.sankakucomplex.com/wp-content/uploads/2015/11/TaimaninAsagi2-EroAnime-6-468x263.jpg",
+      "https://news.sankakucomplex.com/wp-content/uploads/2015/11/TaimaninAsagi2-EroAnime-4-468x263.jpg",
+      "https://news.sankakucomplex.com/wp-content/uploads/2015/11/TaimaninAsagi2-EroAnime-17-468x263.jpg",
+      "https://hentai-moon.com/contents/videos_screenshots/6000/6561/preview.jpg",
+      "https://wimg.rule34.xxx//images/1723/c3136afdf19be5ba33158bcd67bc288016564a97.jpeg?1864008",
+      "https://news.sankakucomplex.com/wp-content/uploads/2015/11/TaimaninAsagi2-EroAnime-82-468x263.jpg",
+      "https://news.sankakucomplex.com/wp-content/uploads/2015/11/TaimaninAsagi2-EroAnime-73-468x263.jpg",
+      "https://news.sankakucomplex.com/wp-content/uploads/2015/11/TaimaninAsagi2-EroAnime-48-468x263.jpg"
     ]
   },
   {
