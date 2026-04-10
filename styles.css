@@ -1,428 +1,238 @@
 /* ======================= GLOBAL ======================= */
-body {
-  margin: 0;
-  font-family: 'Inter', sans-serif;
-  background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
-  color: white;
+body{
+  margin:0;
+  font-family:'Inter',sans-serif;
+  background:linear-gradient(135deg,#0f0c29,#302b63,#24243e);
+  color:white;
 }
 
 /* ======================= HEADER ======================= */
-header {
-  text-align: center;
-  padding: 30px 20px;
+header{
+  text-align:center;
+  padding:30px 20px;
 }
 
-h1 {
-  font-family: 'Orbitron', sans-serif;
-  font-size: 42px;
-  letter-spacing: 2px;
+h1{
+  font-family:'Orbitron',sans-serif;
+  font-size:42px;
+  letter-spacing:2px;
+  text-shadow:0 0 12px #00eaff, 0 0 25px #00eaff;
 }
 
-#searchInput {
-  width: 60%;
-  padding: 12px;
-  border-radius: 8px;
-  border: none;
-  margin: 20px 0;
-  font-size: 16px;
+/* Logo dentro del detalle */
+#logo{
+  font-family:'Orbitron';
+  font-size:28px;
+  cursor:pointer;
+  text-shadow:0 0 10px #00eaff,0 0 20px #00eaff;
+}
+
+/* ======================= BUSCADOR ======================= */
+#searchInput{
+  width:60%;
+  padding:12px;
+  border-radius:8px;
+  border:none;
+  margin:20px 0;
+  font-size:16px;
 }
 
 /* ======================= FILTROS ======================= */
-.filters button {
-  margin: 6px;
-  padding: 10px 16px;
-  border-radius: 6px;
-  border: none;
-  background: #444;
-  color: white;
-  cursor: pointer;
+.filters button{
+  margin:6px;
+  padding:10px 16px;
+  border-radius:6px;
+  border:none;
+  background:#444;
+  color:white;
+  cursor:pointer;
 }
 
-/* ======================= GRID PRINCIPAL ======================= */
-#postsContainer {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: clamp(10px, 4vw, 20px);
-  justify-items: center;
-  padding: clamp(20px, 5vw, 30px);
+/* ======================= GRID HOME ======================= */
+#postsContainer{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:18px; /* MENOR DISTANCIA */
+  padding:25px;
+  justify-items:center;
 }
 
-/* ======================= TARJETAS HOME ======================= */
-.post-card {
-  width: 260px;
-  max-width: 100%;
-  margin: auto;
-  background: #111827;
-  border-radius: 14px;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  transition: 0.3s;
-  border: 2px solid rgba(255, 255, 255, 0.08);
-  cursor: pointer;
+/* ======================= TARJETAS ======================= */
+.post-card{
+  width:260px;
+  background:#111827;
+  border-radius:14px;
+  overflow:hidden;
+  transition:.3s;
+  border:2px solid rgba(255,255,255,.08);
+  cursor:pointer;
 }
 
-.post-card:hover {
-  transform: translateY(-6px);
+.post-card:hover{ transform:translateY(-6px); }
+
+.post-card img{
+  width:100%;
+  height:380px;
+  object-fit:cover;
+  object-position:top;
 }
 
-.post-card img {
-  width: 100%;
-  height: 380px;
-  object-fit: cover;
-  object-position: top;
-  border-radius: 10px;
+.post-card h3{
+  margin:12px 16px 4px;
 }
 
-.post-card h3 {
-  margin: 12px 16px 4px;
-  font-size: 20px;
+.post-card span{
+  margin:0 16px 16px;
+  font-size:13px;
+  opacity:.7;
 }
 
-.post-card span {
-  margin: 0 16px 16px;
-  font-size: 13px;
-  opacity: 0.7;
-  letter-spacing: 1px;
-}
-
-/* ======================= FOOTER ======================= */
-footer {
-  margin-top: 40px;
-  padding: 25px;
-  text-align: center;
-  font-size: 13px;
-}
-
-.legal a {
-  margin: 0 10px;
-  text-decoration: none;
-  color: white;
-  opacity: 0.6;
-}
-
-.counter {
-  margin-top: 15px;
-  font-weight: bold;
-  color: #000;
-}
-
-/* ======================= DETALLE PANTALLA COMPLETA ======================= */
-#ovaDetail {
-  display: none;
-  position: fixed;
-  inset: 0;
-  background: #1a1a2e;
-  overflow-y: auto;
-  z-index: 1000;
-  padding: 40px 20px;
-}
-
-/* CONTENEDOR CENTRAL QUE FALTABA */
-.detail-wrapper {
-  max-width: 1100px;
-  margin: 0 auto;
+/* ======================= DETALLE FULL ======================= */
+#ovaDetail{
+  display:none;
+  position:fixed;
+  inset:0;
+  background:#1a1a2e;
+  overflow-y:auto;
+  z-index:1000;
+  padding:40px 60px;
 }
 
 /* HEADER DETALLE */
-.detail-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-#closeDetail {
-  background: #ff0000;
-  color: white;
-  border: none;
-  padding: 10px 15px;
-  cursor: pointer;
-  border-radius: 5px;
+.detail-header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
 }
 
 /* TITULO */
-.detail-title {
-  font-family: 'Orbitron', sans-serif;
-  font-size: 42px;
-  text-align: left;
-  margin: 10px 0;
-}
-
-.detail-line {
-  width: 120px;
-  height: 3px;
-  background: #ff0000;
-  border: none;
-  margin: 0 0 30px 0;
-}
-
-/* BODY DETALLE */
-.detail-body {
-  display: flex;
-  gap: 40px;
-  align-items: flex-start;
-  margin-bottom: 25px;
-}
-
-/* PORTADA IZQUIERDA — ahora con margen suave */
-.main-image img {
-  width: 420px;
-  border-radius: 10px;
-  margin-left: 10px;
-  cursor: pointer;
-}
-
-/* COLUMNA DERECHA */
-.right-column {
-  display: flex;
-  flex-direction: column;
-  flex: 1;
-}
-
-/* DESCRIPCIÓN */
-#detailDescription {
-  font-size: 16px;
-  line-height: 1.6;
-  margin-bottom: 15px;
-  text-align: center; /* antes se iba a la derecha */
-}
-
-/* GALERÍA */
-.thumbs-container {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 12px;
-  max-width: 900px;
-  margin: 0 auto;
-}
-
-.thumbs-container img {
-  width: 100%;
-  aspect-ratio: 1/1;
-  object-fit: cover;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: 0.2s;
-}
-
-.thumbs-container img:hover {
-  transform: scale(1.05);
-}
-
-/* BOTONES */
-#detailButtons {
-  text-align: center;
-  margin-top: 30px;
-}
-
-#detailButtons button {
-  padding: 16px 55px;
-  border-radius: 10px;
-  font-weight: bold;
-  font-size: 16px;
-  color: white;
-  border: none;
-  cursor: pointer;
-  margin: 10px 20px;
-}
-
-.sub-en { background: #ff0000; }
-.sub-es { background: #007bff; }
-
-/* ======================= OVERLAY CENTRADO ======================= */
-#thumbOverlay {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-#thumbOverlay img {
-  max-width: 90%;
-  max-height: 90%;
-  margin: auto;
-  display: block;
-  border-radius: 10px;
-}
-
-/* ======================= RESPONSIVE ======================= */
-@media(max-width:1100px){
-  .detail-body {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .main-image img {
-    width: 100%;
-    max-width: 420px;
-    margin-left: 0;
-  }
-}
-
-@media(max-width:900px){
-  #postsContainer {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .thumbs-container {
-    grid-template-columns: repeat(2,1fr);
-  }
-
-  #detailButtons button{
-    width: 90%;
-    display: block;
-    margin: 10px auto;
-  }
-}
-
-@media(max-width:500px){
-  #postsContainer {
-    grid-template-columns: 1fr;
-  }
-}
-.view-episodes{
-  display:none;
-}
-#ovaDetail .view-episodes{
-  display:block;
-}
-/* ====== WRAPPER CENTRADO ====== */
-.detail-wrapper{
-  max-width:1200px;
-  margin:0 auto;
-  padding:40px 20px 80px;
-}
-
-/* ====== TITULO ====== */
 .detail-title{
   font-family:'Orbitron';
   font-size:42px;
-  text-align:center;
-  margin-bottom:10px;
+  margin:10px 0;
 }
 
 .detail-line{
-  border:0;
-  height:2px;
-  background:#000;
-  margin:20px auto 40px;
-  width:60%;
+  width:120px;
+  height:3px;
+  background:#ff0000;
+  border:none;
+  margin-bottom:25px;
 }
 
-/* ====== CUERPO ====== */
+/* BODY */
 .detail-body{
-  display:grid;
-  grid-template-columns: 480px 1fr;
-  gap:60px;
-  align-items:start;
+  display:flex;
+  gap:35px;
+  align-items:flex-start;
 }
 
-/* Imagen apenas hacia la izquierda */
-.main-image{
-  margin-left:10px;
-}
-
+/* IMAGEN IZQUIERDA */
 .main-image img{
-  width:100%;
-  border-radius:6px;
-  cursor:pointer;
-  transition:transform .25s ease;
+  width:420px;
+  border-radius:10px;
 }
 
-/* Al hacer click se agranda en el centro */
-.main-image img:active{
-  transform:scale(1.8);
-  z-index:999;
-  position:relative;
-}
-
-/* ====== COLUMNA DERECHA ====== */
+/* COLUMNA DERECHA */
 .right-column{
+  flex:1;
   display:flex;
   flex-direction:column;
+  align-items:center; /* CENTRA CONTENIDO */
 }
 
-/* Descripción más centrada y legible */
 #detailDescription{
-  max-width:650px;
+  text-align:center;
+  max-width:700px;
   line-height:1.6;
-  margin-bottom:40px;
+  margin-bottom:20px;
 }
 
-/* ====== THUMBS ====== */
+/* GALERIA */
 .thumbs-container{
   display:grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns:repeat(3,1fr);
   gap:12px;
-  margin-bottom:50px;
+  max-width:900px;
+  margin:0 auto 30px;
 }
 
 .thumbs-container img{
   width:100%;
+  height:110px;
+  object-fit:cover;
+  border-radius:6px;
   cursor:pointer;
-  border-radius:4px;
 }
 
-/* ====== VIEW EPISODES GRANDE Y CENTRADO ====== */
+/* VIEW EPISODES GRANDE Y CENTRADO */
 .view-episodes{
   font-family:'Orbitron';
   font-size:28px;
+  letter-spacing:3px;
+  margin:30px 0 25px;
   text-align:center;
-  margin:60px 0 40px;
-  letter-spacing:2px;
+  width:100%;
 }
 
-/* ====== BOTONES ====== */
+/* BOTONES CENTRADOS */
 #detailButtons{
-  display:flex;
-  justify-content:center;
-  gap:30px;
-  margin-bottom:60px;
+  text-align:center;
+  margin-bottom:25px;
 }
 
-.sub-en, .sub-es{
-  padding:14px 28px;
+#detailButtons button{
+  padding:16px 55px;
+  border-radius:10px;
+  font-weight:bold;
   font-size:16px;
   border:none;
   cursor:pointer;
-  border-radius:4px;
+  margin:0 25px;
 }
 
-.sub-en{ background:#c40000; color:#fff; }
-.sub-es{ background:#0066ff; color:#fff; }
+.sub-en{ background:#ff0000; color:white; }
+.sub-es{ background:#007bff; color:white; }
 
-/* ====== LINEA NEGRA ====== */
-.bottom-space{
-  border-top:3px solid #000;
-  margin-top:40px;
-  padding-top:30px;
-}
+/* ===== LINEA AZUL + POLITICAS ===== */
 .detail-footer{
-  margin-top:80px;
   text-align:center;
+  margin-top:20px;
 }
 
 .blue-line{
   height:3px;
-  background:#1e5bff;
-  width:70%;
-  margin:0 auto 30px;
-}
-
-.legal-links{
-  display:flex;
-  justify-content:center;
-  gap:40px;
-  font-family:'Orbitron';
-  font-size:14px;
-  margin-bottom:40px;
+  background:#00aaff;
+  width:100%;
+  margin-bottom:10px;
 }
 
 .legal-links a{
+  color:white;
+  opacity:.8;
+  margin:0 12px;
   text-decoration:none;
-  color:#000;
-  transition:opacity .2s ease;
+  font-size:14px;
 }
 
-.legal-links a:hover{
-  opacity:0.6;
+/* ======================= FOOTER HOME ======================= */
+footer{
+  text-align:center;
+  padding:20px 10px;
+}
+
+.counter{
+  color:black;
+  font-weight:bold;
+}
+
+/* ======================= RESPONSIVE ======================= */
+@media(max-width:900px){
+  #postsContainer{ grid-template-columns:repeat(2,1fr); }
+  .detail-body{ flex-direction:column; align-items:center; }
+  .main-image img{ width:100%; max-width:420px; }
+}
+
+@media(max-width:500px){
+  #postsContainer{ grid-template-columns:1fr; }
 }
