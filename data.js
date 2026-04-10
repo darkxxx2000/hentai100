@@ -100,12 +100,32 @@ const posts = [
   },
 
   {
-    title: "OVA Sample 06",
-    tags: ["school", "dark"],
+    title: "Tentacles and Witches",
+    tags: ["tentacles"],
     color: "dark",
     image: "https://via.placeholder.com/800x500?text=OVA+06",
     description: "Sample OVA ready to replace with real content.",
     links: { english: "#", spanish: "#" },
+    thumbnails: [
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBNbKgvpsQof87KT0ljz7MAvnYtSVPut2ibg&s",
+      "https://himg.nl/images/hh/TentacleandWitches3/poster.jpg",
+      "https://lh5.googleusercontent.com/proxy/XAhb1CX9qZ3eLfelIIzXT49I9Zt8vmjXuUdWakDKmFgPy22JjYO0Au8XvktZqXeGfyFsyCLDaFV6pECPxJpV2oM5U49Wn62xg_7okuQvAXBbiZ7YOBSiMHrt5l93U3_wPcaW3w",
+      "https://imggen.eporner.com/9749063/3840/2160/13.jpg",
+      "https://preview.redd.it/tentacle-and-witches-episode-1-v0-4j7yfwwy1v7b1.gif?width=624&auto=webp&s=9b5faeb8cfc3ec6e663d774fc1ac475abc4683b7",
+      "https://www.watch-hentai.com/wp-content/uploads/2018/11/9672.jpg",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSm2IQDXjirrGbWaIGMUi5lZYl8WobDPQwXJQ&s",
+      "https://www.hentaicloud.com/media/videos/tmb/1224/default.jpg",
+      "https://hentaimama.io/wp-content/uploads/2021/12/tentacleandwitches12.jpg"
+    ]
+  },
+
+  {
+    title: "OVA Sample 07",
+    tags: ["monster", "action"],
+    color: "monster",
+    image: "https://doujinrepublic.com/media/binary/000/987/620/987620.jpg",
+    description: "Sample OVA ready to replace with real content.",
+    links: { english: "https://hentaihaven.xxx/watch/tentacle-and-witches/", spanish: "https://open.aniyae.net/ah/tentacle-and-witches" },
     thumbnails: [
       "https://via.placeholder.com/640x360?text=06-1",
       "https://via.placeholder.com/640x360?text=06-2",
@@ -116,26 +136,6 @@ const posts = [
       "https://via.placeholder.com/640x360?text=06-7",
       "https://via.placeholder.com/640x360?text=06-8",
       "https://via.placeholder.com/640x360?text=06-9"
-    ]
-  },
-
-  {
-    title: "OVA Sample 07",
-    tags: ["monster", "action"],
-    color: "monster",
-    image: "https://via.placeholder.com/800x500?text=OVA+07",
-    description: "Sample OVA ready to replace with real content.",
-    links: { english: "#", spanish: "#" },
-    thumbnails: [
-      "https://via.placeholder.com/640x360?text=07-1",
-      "https://via.placeholder.com/640x360?text=07-2",
-      "https://via.placeholder.com/640x360?text=07-3",
-      "https://via.placeholder.com/640x360?text=07-4",
-      "https://via.placeholder.com/640x360?text=07-5",
-      "https://via.placeholder.com/640x360?text=07-6",
-      "https://via.placeholder.com/640x360?text=07-7",
-      "https://via.placeholder.com/640x360?text=07-8",
-      "https://via.placeholder.com/640x360?text=07-9"
     ]
   },
 
