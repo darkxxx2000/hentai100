@@ -46,7 +46,7 @@ const posts = [
     title: "Taimanin Asagi (2016)",
     tags: ["tentacles", "monster"],
     color: "tentacles",
-    image: "https://static.wikia.nocookie.net/taimanin/images/f/f3/Tadvdcover.jpg/revision/latest?cb=20180924031208",
+    image: "https://static.wikia.nocookie.net/taimanin/images/b/be/Taimanin_Asagi_3_OVA.jpg/revision/latest/thumbnail/width/360/height/450?cb=20201119052450",
     description: "Classic OVA about Taimanin Asagi. Ready for episodes.",
     links: {
       english: "https://watchhentai.net/series/taimanin-asagi-id-01/",
@@ -66,11 +66,11 @@ const posts = [
   },
 
   {
-    title: "OVA Sample 04",
+    title: "Taimanin Asagi (2020)",
     tags: ["monster", "dark"],
     color: "monster",
-    image: "https://via.placeholder.com/800x500?text=OVA+04",
-    description: "Sample OVA ready to replace with real content.",
+    image: "https://megahentaihd.com/wp-content/uploads/Taimanin-Asagi-Toraware-no-Niku-Ningyou.jpg",
+    description: "End.",
     links: { english: "#", spanish: "#" },
     thumbnails: [
       "https://via.placeholder.com/640x360?text=04-1",
