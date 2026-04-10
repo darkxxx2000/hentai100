@@ -34,14 +34,11 @@ const posts = [
     },
     thumbnails: [
       "https://wimg.rule34.xxx//images/1721/dcb5c69e2d93cbd2092c0b5f0987f33b136f13ac.jpeg?1861917",
-      "https://news.sankakucomplex.com/wp-content/uploads/2015/11/TaimaninAsagi2-EroAnime-6-468x263.jpg",
-      "https://news.sankakucomplex.com/wp-content/uploads/2015/11/TaimaninAsagi2-EroAnime-4-468x263.jpg",
-      "https://news.sankakucomplex.com/wp-content/uploads/2015/11/TaimaninAsagi2-EroAnime-17-468x263.jpg",
       "https://hentai-moon.com/contents/videos_screenshots/6000/6561/preview.jpg",
       "https://wimg.rule34.xxx//images/1723/c3136afdf19be5ba33158bcd67bc288016564a97.jpeg?1864008",
-      "https://news.sankakucomplex.com/wp-content/uploads/2015/11/TaimaninAsagi2-EroAnime-82-468x263.jpg",
-      "https://news.sankakucomplex.com/wp-content/uploads/2015/11/TaimaninAsagi2-EroAnime-73-468x263.jpg",
-      "https://news.sankakucomplex.com/wp-content/uploads/2015/11/TaimaninAsagi2-EroAnime-48-468x263.jpg"
+      "https://cdn-img1.peekvids.com/thumbs/993/993229/878.jpg",
+      "https://erotic-hentai.com/wp-content/uploads/2021/11/Taimanin-Asagi-2-Episode-1.jpg",
+      "https://img.xbooru.com//images/303/eb62eb6201ffd8c6f221187f633420bd.gif?947567"
     ]
   },
 
