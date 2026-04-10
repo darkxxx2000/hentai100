@@ -279,3 +279,150 @@ footer {
     grid-template-columns: 1fr;
   }
 }
+.view-episodes{
+  display:none;
+}
+#ovaDetail .view-episodes{
+  display:block;
+}
+/* ====== WRAPPER CENTRADO ====== */
+.detail-wrapper{
+  max-width:1200px;
+  margin:0 auto;
+  padding:40px 20px 80px;
+}
+
+/* ====== TITULO ====== */
+.detail-title{
+  font-family:'Orbitron';
+  font-size:42px;
+  text-align:center;
+  margin-bottom:10px;
+}
+
+.detail-line{
+  border:0;
+  height:2px;
+  background:#000;
+  margin:20px auto 40px;
+  width:60%;
+}
+
+/* ====== CUERPO ====== */
+.detail-body{
+  display:grid;
+  grid-template-columns: 480px 1fr;
+  gap:60px;
+  align-items:start;
+}
+
+/* Imagen apenas hacia la izquierda */
+.main-image{
+  margin-left:10px;
+}
+
+.main-image img{
+  width:100%;
+  border-radius:6px;
+  cursor:pointer;
+  transition:transform .25s ease;
+}
+
+/* Al hacer click se agranda en el centro */
+.main-image img:active{
+  transform:scale(1.8);
+  z-index:999;
+  position:relative;
+}
+
+/* ====== COLUMNA DERECHA ====== */
+.right-column{
+  display:flex;
+  flex-direction:column;
+}
+
+/* Descripción más centrada y legible */
+#detailDescription{
+  max-width:650px;
+  line-height:1.6;
+  margin-bottom:40px;
+}
+
+/* ====== THUMBS ====== */
+.thumbs-container{
+  display:grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap:12px;
+  margin-bottom:50px;
+}
+
+.thumbs-container img{
+  width:100%;
+  cursor:pointer;
+  border-radius:4px;
+}
+
+/* ====== VIEW EPISODES GRANDE Y CENTRADO ====== */
+.view-episodes{
+  font-family:'Orbitron';
+  font-size:28px;
+  text-align:center;
+  margin:60px 0 40px;
+  letter-spacing:2px;
+}
+
+/* ====== BOTONES ====== */
+#detailButtons{
+  display:flex;
+  justify-content:center;
+  gap:30px;
+  margin-bottom:60px;
+}
+
+.sub-en, .sub-es{
+  padding:14px 28px;
+  font-size:16px;
+  border:none;
+  cursor:pointer;
+  border-radius:4px;
+}
+
+.sub-en{ background:#c40000; color:#fff; }
+.sub-es{ background:#0066ff; color:#fff; }
+
+/* ====== LINEA NEGRA ====== */
+.bottom-space{
+  border-top:3px solid #000;
+  margin-top:40px;
+  padding-top:30px;
+}
+.detail-footer{
+  margin-top:80px;
+  text-align:center;
+}
+
+.blue-line{
+  height:3px;
+  background:#1e5bff;
+  width:70%;
+  margin:0 auto 30px;
+}
+
+.legal-links{
+  display:flex;
+  justify-content:center;
+  gap:40px;
+  font-family:'Orbitron';
+  font-size:14px;
+  margin-bottom:40px;
+}
+
+.legal-links a{
+  text-decoration:none;
+  color:#000;
+  transition:opacity .2s ease;
+}
+
+.legal-links a:hover{
+  opacity:0.6;
+}
