@@ -267,3 +267,22 @@ footer .legal a{
   color:#000;
   font-weight:bold;
 }
+/* ===== AJUSTE REAL DE SEPARACIÓN EN HOME (NO rompe nada) ===== */
+#postsContainer{
+  grid-template-columns:repeat(3, 260px); /* usa el ancho real de la card */
+  justify-content:center;                 /* centra el bloque */
+  gap:14px;                              /* separación visual corta */
+  padding:25px 10px 10px;
+}
+
+@media(max-width:900px){
+  #postsContainer{
+    grid-template-columns:repeat(2, 260px);
+  }
+}
+
+@media(max-width:500px){
+  #postsContainer{
+    grid-template-columns:260px;
+  }
+}
