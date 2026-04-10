@@ -286,3 +286,33 @@ footer .legal a{
     grid-template-columns:260px;
   }
 }
+/* ===== ORDEN FINAL HOME: linea azul → politicas → visitors ===== */
+
+footer{
+  margin-top:70px;
+  text-align:center;
+  padding-top:14px;
+}
+
+/* fuerza orden visual */
+footer .legal{
+  display:block;
+  margin:10px 0 6px;
+  font-family:'Orbitron';
+  font-size:14px;
+}
+
+footer .legal a{
+  color:white !important;
+  text-decoration:none;
+  margin:0 16px;
+  opacity:.95;
+}
+
+/* Visitors negro forzado real */
+footer .counter,
+footer .counter span,
+#visitCount{
+  color:#000 !important;
+  font-weight:bold;
+}
