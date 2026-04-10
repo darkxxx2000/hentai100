@@ -120,22 +120,22 @@ const posts = [
   },
 
   {
-    title: "OVA Sample 07",
-    tags: ["monster", "action"],
+    title: "Mahou Shoujo Isuka",
+    tags: ["tentacles"],
     color: "monster",
-    image: "#",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwS8sh0U3SN8MSGUlFn4nElxAx9uSBloZ-bQ&s",
     description: "Sample OVA ready to replace with real content.",
-    links: { english: "https://hentaihaven.xxx/watch/tentacle-and-witches/", spanish: "https://open.aniyae.net/ah/tentacle-and-witches" },
+    links: { english: "https://hentaihaven.xxx/watch/mahou-shoujo-isuka/", spanish: "https://hentaila.tv/ver/mahou-shoujo-isuka/" },
     thumbnails: [
-      "https://via.placeholder.com/640x360?text=06-1",
-      "https://via.placeholder.com/640x360?text=06-2",
-      "https://via.placeholder.com/640x360?text=06-3",
-      "https://via.placeholder.com/640x360?text=06-4",
-      "https://via.placeholder.com/640x360?text=06-5",
-      "https://via.placeholder.com/640x360?text=06-6",
-      "https://via.placeholder.com/640x360?text=06-7",
-      "https://via.placeholder.com/640x360?text=06-8",
-      "https://via.placeholder.com/640x360?text=06-9"
+      "https://images-ng.pixai.art/images/orig/09fd63cf-9f43-4434-aad1-83e13b82da10",
+      "https://i0.wp.com/img.hanime.watch/thumb/magical-girl-isuka-1.webp",
+      "https://watchhentai.net/uploads/2022/12/mahou-shoujo-isuka/1.jpg",
+      "https://veohentai.com/wp-content/uploads/2022/08/magical-girl-isuka-3.jpg",
+      "https://imagex1.sx.cdn.live/images/pinporn/2015/05/29/12138244.gif?width=460",
+      "https://hentai-moon.com/contents/videos_screenshots/0/774/preview.mp4.jpg",
+      "https://hentaitk.net/wp-content/uploads/2018/03/vlcsnap-2018-03-13-00h17m26s048.jpg",
+      "https://i0.wp.com/reasonstoanime.com/wp-content/uploads/2024/04/Magical_Girl_Isuka_-_01_x26409158789.mp4-00024.png?resize=853%2C480&ssl=1",
+      "https://hentaitk.net/wp-content/uploads/2018/03/vlcsnap-2018-03-13-00h18m01s218.jpg"
     ]
   },
 
