@@ -83,7 +83,7 @@ const posts = [
     title: "Makai Kishi Ingrid",
     tags: ["monster", "tentacles"],
     color: "monster",
-    image: "https://via.placeholder.com/800x500?text=OVA+05",
+    image: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiIUGEEGVVoZjrUhBXgNDHVdyZDYBVC3oRCWEdp6U75RWOSGPUmAzv0iTsskqoiqeSzovDkyvnoevHr_FD6tfKiH9LMMcKwtLTzYcRxIulL1tRUwJywmhiGazdSw1nPlX-FexMD-UtCttPnI0mtpmsVESelFmvUFEuY5fVfGDC69YH9Qvdl2rnRrpVl3BY/s1000/makai6.jpg",
     description: "Sample OVA ready to replace with real content.",
     links: { english: "https://hentaihaven.xxx/watch/makai-kishi-ingrid/", spanish: "https://hentaila.tv/ver/makai-kishi-ingrid/" },
     thumbnails: [
@@ -95,7 +95,7 @@ const posts = [
       "https://i0.wp.com/v2.hentaihd.net/wp-content/uploads/2022/09/Makai-Kishi-Ingrid-Episode-1_3.jpg",
       "https://hentai4k.com/contents/videos_screenshots/0/330/preview.mp4.jpg",
       "https://static.wikia.nocookie.net/magical-girl-mahou-shoujo/images/c/c8/267fc6048357c8337c1bdccc466db64c.jpg/revision/latest?cb=20161031170026",
-      "https://via.placeholder.com/640x360?text=05-9"
+      "https://wimg.rule34.xxx//images/789/9e94bd6fb2dbd601ac82e08e8c6dcd6d3acd0a60.gif?788295"
     ]
   },
 
