@@ -103,9 +103,9 @@ const posts = [
     title: "Tentacles and Witches",
     tags: ["tentacles"],
     color: "dark",
-    image: "https://via.placeholder.com/800x500?text=OVA+06",
+    image: "https://doujinrepublic.com/media/binary/000/987/620/987620.jpg",
     description: "Sample OVA ready to replace with real content.",
-    links: { english: "#", spanish: "#" },
+    links: { english: "https://hentaihaven.xxx/watch/tentacle-and-witches/", spanish: "https://open.aniyae.net/ah/tentacle-and-witches" },
     thumbnails: [
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBNbKgvpsQof87KT0ljz7MAvnYtSVPut2ibg&s",
       "https://himg.nl/images/hh/TentacleandWitches3/poster.jpg",
@@ -123,7 +123,7 @@ const posts = [
     title: "OVA Sample 07",
     tags: ["monster", "action"],
     color: "monster",
-    image: "https://doujinrepublic.com/media/binary/000/987/620/987620.jpg",
+    image: "#",
     description: "Sample OVA ready to replace with real content.",
     links: { english: "https://hentaihaven.xxx/watch/tentacle-and-witches/", spanish: "https://open.aniyae.net/ah/tentacle-and-witches" },
     thumbnails: [
