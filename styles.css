@@ -38,20 +38,20 @@ h1 {
   cursor: pointer;
 }
 
-/* ======================= GRID PRINCIPAL AJUSTADO ======================= */
+/* ======================= GRID PRINCIPAL ======================= */
 #postsContainer {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 tarjetas en escritorio */
-  gap: clamp(10px, 4vw, 20px);          /* gap adaptable según el ancho */
-  justify-items: center;                 /* centra las tarjetas dentro de cada celda */
-  padding: clamp(20px, 5vw, 30px);       /* padding adaptable */
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(10px, 4vw, 20px);
+  justify-items: center;
+  padding: clamp(20px, 5vw, 30px);
 }
 
 /* ======================= TARJETAS HOME ======================= */
 .post-card {
-  width: 260px;       /* mantiene tamaño visual */
-  max-width: 100%;    /* nunca excede la pantalla */
-  margin: auto;       /* centra dentro de cada celda */
+  width: 260px;
+  max-width: 100%;
+  margin: auto;
   background: #111827;
   border-radius: 14px;
   overflow: hidden;
@@ -68,7 +68,7 @@ h1 {
 
 .post-card img {
   width: 100%;
-  height: 380px;        /* vertical preview */
+  height: 380px;
   object-fit: cover;
   object-position: top;
   border-radius: 10px;
@@ -111,15 +111,17 @@ footer {
 #ovaDetail {
   display: none;
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  inset: 0;
   background: #1a1a2e;
-  color: white;
   overflow-y: auto;
   z-index: 1000;
-  padding: 40px 60px;
+  padding: 40px 20px;
+}
+
+/* CONTENEDOR CENTRAL QUE FALTABA */
+.detail-wrapper {
+  max-width: 1100px;
+  margin: 0 auto;
 }
 
 /* HEADER DETALLE */
@@ -162,10 +164,12 @@ footer {
   margin-bottom: 25px;
 }
 
-/* PORTADA IZQUIERDA */
+/* PORTADA IZQUIERDA — ahora con margen suave */
 .main-image img {
   width: 420px;
   border-radius: 10px;
+  margin-left: 10px;
+  cursor: pointer;
 }
 
 /* COLUMNA DERECHA */
@@ -175,23 +179,26 @@ footer {
   flex: 1;
 }
 
-/* DESCRIPCIÓN ARRIBA */
+/* DESCRIPCIÓN */
 #detailDescription {
   font-size: 16px;
   line-height: 1.6;
   margin-bottom: 15px;
+  text-align: center; /* antes se iba a la derecha */
 }
 
-/* GALERÍA 3x3 HORIZONTAL */
+/* GALERÍA */
 .thumbs-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 12px;
+  max-width: 900px;
+  margin: 0 auto;
 }
 
 .thumbs-container img {
   width: 100%;
-  height: 110px;
+  aspect-ratio: 1/1;
   object-fit: cover;
   border-radius: 6px;
   cursor: pointer;
@@ -202,15 +209,7 @@ footer {
   transform: scale(1.05);
 }
 
-/* VIEW EPISODES */
-.view-episodes {
-  text-align: center;
-  font-family: 'Orbitron';
-  letter-spacing: 2px;
-  margin-top: 20px;
-}
-
-/* BOTONES GRANDES */
+/* BOTONES */
 #detailButtons {
   text-align: center;
   margin-top: 30px;
@@ -224,83 +223,59 @@ footer {
   color: white;
   border: none;
   cursor: pointer;
-  margin: 0 30px;
+  margin: 10px 20px;
 }
 
 .sub-en { background: #ff0000; }
 .sub-es { background: #007bff; }
 
-/* ESPACIO FINAL */
-.bottom-space {
-  height: 100px;
+/* ======================= OVERLAY CENTRADO ======================= */
+#thumbOverlay {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#thumbOverlay img {
+  max-width: 90%;
+  max-height: 90%;
+  margin: auto;
+  display: block;
+  border-radius: 10px;
 }
 
 /* ======================= RESPONSIVE ======================= */
 @media(max-width:1100px){
   .detail-body {
     flex-direction: column;
+    align-items: center;
   }
 
   .main-image img {
     width: 100%;
     max-width: 420px;
+    margin-left: 0;
   }
 }
 
 @media(max-width:900px){
   #postsContainer {
-    grid-template-columns: repeat(2, 1fr); /* 2 tarjetas en tablets */
-    gap: clamp(15px, 3vw, 30px);
-    padding: clamp(15px, 4vw, 40px);
-  }
-
-  .detail-body {
-    flex-direction: column;
-  }
-
-  .main-image img {
-    width: 100%;
-    max-width: 100%;
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .thumbs-container {
     grid-template-columns: repeat(2,1fr);
   }
 
-  #detailButtons .sub-en,
-  #detailButtons .sub-es{
+  #detailButtons button{
     width: 90%;
-    margin: 10px auto;
     display: block;
+    margin: 10px auto;
   }
 }
 
 @media(max-width:500px){
   #postsContainer {
-    grid-template-columns: 1fr; /* 1 tarjeta en móviles */
-    gap: clamp(10px, 5vw, 25px);
-    padding: clamp(10px, 5vw, 30px);
+    grid-template-columns: 1fr;
   }
-}
-/* Galería más cuadrada y centrada */
-.thumbs-container {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 por fila */
-  gap: 12px;
-  justify-content: center; /* centra toda la galería */
-  max-width: 1280px;       /* limita el ancho total */
-  margin: 0 auto;          /* centra la galería en la pantalla */
-}
-
-.thumbs-container img {
-  width: 100%;
-  aspect-ratio: 6/3;       /* más cuadrada y ligeramente vertical */
-  object-fit: cover;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: transform 0.2s;
-}
-
-.thumbs-container img:hover {
-  transform: scale(1.05);
 }
