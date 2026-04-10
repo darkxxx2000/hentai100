@@ -3,6 +3,38 @@
 const container = document.getElementById('postsContainer');
 const input = document.getElementById('searchInput');
 
+// ===== OVERLAY ZOOM UNIVERSAL =====
+function openImageOverlay(src){
+  let overlay = document.getElementById('imgOverlay');
+
+  if(!overlay){
+    overlay = document.createElement('div');
+    overlay.id = 'imgOverlay';
+    overlay.style.position = 'fixed';
+    overlay.style.inset = '0';
+    overlay.style.background = 'rgba(0,0,0,0.88)';
+    overlay.style.display = 'flex';
+    overlay.style.alignItems = 'center';
+    overlay.style.justifyContent = 'center';
+    overlay.style.zIndex = '3000';
+    overlay.style.cursor = 'pointer';
+    document.body.appendChild(overlay);
+
+    overlay.addEventListener('click', ()=> overlay.remove());
+
+    document.addEventListener('keydown', function esc(e){
+      if(e.key === 'Escape'){
+        overlay.remove();
+        document.removeEventListener('keydown', esc);
+      }
+    });
+  }
+
+  overlay.innerHTML = `
+    <img src="${src}" style="max-width:92%; max-height:92%; border-radius:12px;">
+  `;
+}
+
 /* ========= SLUG ========= */
 function slugify(text){
   return text
@@ -27,7 +59,6 @@ function renderPosts(list){
     `;
 
     card.addEventListener('click', ()=> openDetail(post));
-
     container.appendChild(card);
   });
 }
@@ -49,52 +80,12 @@ function showOvaDetail(post){
   // Imagen principal
   const mainImage = document.getElementById('detailMainImage');
   mainImage.src = post.image;
-
-  // Overlay al click en imagen principal
-  mainImage.addEventListener('click', ()=>{
-    let overlay = document.getElementById('thumbOverlay');
-    if (!overlay){
-      overlay = document.createElement('div');
-      overlay.id = 'thumbOverlay';
-      overlay.style.position = 'fixed';
-      overlay.style.top = '0';
-      overlay.style.left = '0';
-      overlay.style.width = '100%';
-      overlay.style.height = '100%';
-      overlay.style.background = 'rgba(0,0,0,0.85)';
-      overlay.style.display = 'flex';
-      overlay.style.alignItems = 'center';
-      overlay.style.justifyContent = 'center';
-      overlay.style.zIndex = '2000';
-      overlay.style.cursor = 'pointer';
-      document.body.appendChild(overlay);
-
-      // Cerrar al click o Escape
-      overlay.addEventListener('click', ()=> overlay.remove());
-      document.addEventListener('keydown', function escHandler(e){
-        if(e.key === 'Escape'){
-          overlay.remove();
-          document.removeEventListener('keydown', escHandler);
-        }
-      });
-    }
-
-    // Carga la imagen solo cuando termina de cargar
-    const img = new Image();
-    img.src = mainImage.src;
-    img.style.maxWidth = '90%';
-    img.style.maxHeight = '90%';
-    img.style.borderRadius = '10px';
-    img.onload = ()=> {
-      overlay.innerHTML = '';
-      overlay.appendChild(img);
-    };
-  });
+  mainImage.onclick = ()=> openImageOverlay(mainImage.src);
 
   // Título
   document.getElementById('detailTitle').innerText = post.title;
 
-  // Thumbnails
+  // Thumbnails (9)
   const thumbs = document.getElementById('detailThumbnails');
   thumbs.innerHTML = '';
 
@@ -102,9 +93,10 @@ function showOvaDetail(post){
     post.thumbnails.slice(0,9).forEach(url=>{
       const img = document.createElement('img');
       img.src = url;
-      img.addEventListener('click', ()=>{
-        mainImage.src = url;
-      });
+
+      // Click = zoom al centro
+      img.onclick = ()=> openImageOverlay(url);
+
       thumbs.appendChild(img);
     });
   }
