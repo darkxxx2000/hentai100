@@ -1,7 +1,7 @@
 const posts = [
   {
     title: "Taimanin Asagi (2007)",
-    tags: ["tentacles", "ecchi"],
+    tags: ["tentacles", "monster"],
     color: "tentacles",
     image: "https://static.wikia.nocookie.net/taimanin/images/f/f3/Tadvdcover.jpg/revision/latest?cb=20180924031208",
     description: "The world is a dangerous place. Humans and demons coexist under delicate circumstances, dictated by an unspoken pledge not to influence one another. 
@@ -28,13 +28,13 @@ const posts = [
 
   {
     title: "Taimanin Asagi (2015)",
-    tags: ["monster", "hardcore"],
+    tags: ["monster", "tentacles"],
     color: "monster",
     image: "https://cdn.hentaijk.com/assets/images/animes/image/taimanin-asagi-2.jpg",
     description: "A year had passed since the Chaos Arena was destroyed. Asagi and Sakura now stood in an abandoned street on an artificial island floating above Tokyo Bay. It was a massive, box-shaped structure built by the government and known as the “Tokyo Kingdom.” There had once been hopes that it would become a second urban center rising from the sea, but it had failed to attract businesses.
 
-The only way to enter or leave the island was from Honshu, across the ten-kilometer Tokyo Kingdom Bridge. Unfortunately, this narrow route also became the path through which the denizens of the underworld found their way onto the island, drawing anarchists, criminals, and even illegal immigrants there, turning the sea-bound city streets into a refuge of worldwide notoriety for danger.
-
+The only way to enter or leave the island was from Honshu, across the ten-kilometer Tokyo Kingdom Bridge. Unfortunately, this narrow route also became the path through which the denizens of the underworld found their way onto the island, drawing anarchists, criminals, and even illegal immigrants there, turning the sea-bound city streets into a refuge of worldwide notoriety for danger. 
+  
 Yet, as deserted as the streets appeared, a strange form of order still existed in that place, despite it being a breeding ground for crime.",
     links: {
       english: "https://watchhentai.net/series/taimanin-asagi-2-id-01/",
@@ -54,8 +54,8 @@ Yet, as deserted as the streets appeared, a strange form of order still existed 
     ]
   },
   {
-    title: "Taimanin Asagi (2007)",
-    tags: ["tentacles", "ecchi"],
+    title: "Taimanin Asagi (2016)",
+    tags: ["tentacles", "Monster"],
     color: "tentacles",
     image: "https://static.wikia.nocookie.net/taimanin/images/f/f3/Tadvdcover.jpg/revision/latest?cb=20180924031208",
     description: "Classic OVA about Taimanin Asagi. Ready for episodes.",
