@@ -140,12 +140,14 @@ const posts = [
   },
 
   {
-    title: "OVA Sample 08",
-    tags: ["fantasy", "magic"],
+    title: "Kunoichi (Studio Fow)",
+    tags: ["3D", "monster"],
     color: "magic",
     image: "https://via.placeholder.com/800x500?text=OVA+08",
     description: "Sample OVA ready to replace with real content.",
-    links: { english: "#", spanish: "#" },
+    links: { Episode 1: "https://hentaihaven.xxx/watch/kunoichi-broken-princess/episode-1-uncensored/", 
+            Episode 2: "https://hentaihaven.xxx/watch/kunoichi-2-fall-of-the-shrinemaiden-uncensored/episode-1/", 
+            Episode 3: "https://hentaihaven.xxx/watch/kunoichi-3-dark-butterfly/episode-1/" },
     thumbnails: [
       "https://via.placeholder.com/640x360?text=08-1",
       "https://via.placeholder.com/640x360?text=08-2",
