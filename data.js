@@ -145,7 +145,7 @@ const posts = [
     color: "magic",
     image: "https://via.placeholder.com/800x500?text=OVA+08",
     description: "Sample OVA ready to replace with real content.",
-    links: { episode 1: "https://hentaihaven.xxx/watch/kunoichi-broken-princess/episode-1-uncensored/", episode 2: "https://hentaihaven.xxx/watch/kunoichi-2-fall-of-the-shrinemaiden-uncensored/episode-1/", episode 3: "https://hentaihaven.xxx/watch/kunoichi-3-dark-butterfly/episode-1/" },
+    links: { english: "https://hentaihaven.xxx/watch/mahou-shoujo-isuka/", spanish: "https://hentaila.tv/ver/mahou-shoujo-isuka/" },
     thumbnails: [
       "https://via.placeholder.com/640x360?text=08-1",
       "https://via.placeholder.com/640x360?text=08-2",
