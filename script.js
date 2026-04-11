@@ -31,7 +31,8 @@ function openImageOverlay(src){
   }
 
   overlay.innerHTML = `
-    <img src="${src}" style="max-width:92%; max-height:92%; border-radius:12px;">
+    <img src="${src}" referrerpolicy="no-referrer"
+         style="max-width:92%; max-height:92%; border-radius:12px;">
   `;
 }
 
@@ -52,7 +53,9 @@ function renderPosts(list){
     card.className = 'post-card';
 
     card.innerHTML = `
-      <img loading="lazy" src="${post.image}"
+      <img loading="lazy"
+           src="${post.image}"
+           referrerpolicy="no-referrer"
            onerror="this.src='https://via.placeholder.com/400x600?text=No+Image'">
       <h3>${post.title}</h3>
       <span>${post.tags[0] || ''}</span>
@@ -80,6 +83,7 @@ function showOvaDetail(post){
   // Imagen principal
   const mainImage = document.getElementById('detailMainImage');
   mainImage.src = post.image;
+  mainImage.referrerPolicy = "no-referrer";
   mainImage.onclick = ()=> openImageOverlay(mainImage.src);
 
   // Título
@@ -93,8 +97,8 @@ function showOvaDetail(post){
     post.thumbnails.slice(0,9).forEach(url=>{
       const img = document.createElement('img');
       img.src = url;
+      img.referrerPolicy = "no-referrer";
 
-      // Click = zoom al centro
       img.onclick = ()=> openImageOverlay(url);
 
       thumbs.appendChild(img);
