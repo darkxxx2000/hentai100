@@ -3,6 +3,22 @@
 const container = document.getElementById('postsContainer');
 const input = document.getElementById('searchInput');
 
+/* ======== FIX REAL FANDOM / WIKIA BLOCK ======== */
+function safeImageLoad(imgElement, url){
+  const proxyImg = new Image();
+  proxyImg.referrerPolicy = "no-referrer";
+
+  proxyImg.onload = function(){
+    imgElement.src = proxyImg.src;
+  };
+
+  proxyImg.onerror = function(){
+    imgElement.src = "https://via.placeholder.com/400x600?text=No+Image";
+  };
+
+  proxyImg.src = url;
+}
+
 // ===== OVERLAY ZOOM UNIVERSAL =====
 function openImageOverlay(src){
   let overlay = document.getElementById('imgOverlay');
@@ -30,10 +46,9 @@ function openImageOverlay(src){
     });
   }
 
-  overlay.innerHTML = `
-    <img src="${src}" referrerpolicy="no-referrer"
-         style="max-width:92%; max-height:92%; border-radius:12px;">
-  `;
+  overlay.innerHTML = `<img style="max-width:92%; max-height:92%; border-radius:12px;">`;
+  const img = overlay.querySelector('img');
+  safeImageLoad(img, src);
 }
 
 /* ========= SLUG ========= */
@@ -53,13 +68,13 @@ function renderPosts(list){
     card.className = 'post-card';
 
     card.innerHTML = `
-      <img loading="lazy"
-           src="${post.image}"
-           referrerpolicy="no-referrer"
-           onerror="this.src='https://via.placeholder.com/400x600?text=No+Image'">
+      <img loading="lazy">
       <h3>${post.title}</h3>
       <span>${post.tags[0] || ''}</span>
     `;
+
+    const img = card.querySelector('img');
+    safeImageLoad(img, post.image);
 
     card.addEventListener('click', ()=> openDetail(post));
     container.appendChild(card);
@@ -82,9 +97,8 @@ function showOvaDetail(post){
 
   // Imagen principal
   const mainImage = document.getElementById('detailMainImage');
-  mainImage.src = post.image;
-  mainImage.referrerPolicy = "no-referrer";
-  mainImage.onclick = ()=> openImageOverlay(mainImage.src);
+  safeImageLoad(mainImage, post.image);
+  mainImage.onclick = ()=> openImageOverlay(post.image);
 
   // Título
   document.getElementById('detailTitle').innerText = post.title;
@@ -96,11 +110,8 @@ function showOvaDetail(post){
   if(post.thumbnails){
     post.thumbnails.slice(0,9).forEach(url=>{
       const img = document.createElement('img');
-      img.src = url;
-      img.referrerPolicy = "no-referrer";
-
+      safeImageLoad(img, url);
       img.onclick = ()=> openImageOverlay(url);
-
       thumbs.appendChild(img);
     });
   }
